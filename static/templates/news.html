@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}新闻动态{% endblock title %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-area min-h-a"
+        style="background-image: url({% static 'assets/img/banner/8.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/title-d.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                        <li class="active">新闻动态</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock breadcrumb %}
+
+{% block content %}
+    <!-- Start About    ============================================= -->
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="row">
+                {% if handian_news %}
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    
+                    <div class="news-title">
+                        <h2>汉典<span>新<a>闻</a></span></h2>
+                    </div>
+                    {% for n in handian_news %}
+                        {% if forloop.counter == 1 %}
+                            <div class="news-banner">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-12"><img src="{{ n.img_header }}" alt="" /></div>
+                                    <div class="col-lg-8 col-md-8 col-sm-12">
+                                        <a href="{% url 'user:news-detail' n.id %}">
+                                            <h3>{{ n.title }}</h3>
+                                            <p><span>{{ n.create_time }}</span></p>
+                                            <p>{{ n.summarize }}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="news-list">
+                                <a href="{% url 'user:news-detail' n.id %}">
+                                    <span class="time"><strong>{{ n.create_time|slice:"8:" }}</strong><br>{{ n.create_time|slice:":7" }}</span>
+                                    <h2>{{ n.title }}</h2>
+                                    <p>{{ n.summarize }}</p>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <a href="{% url 'user:news-list' %}?types=汉典新闻" class="news-btn">查看更多</a>
+                </div>
+                {% endif %}
+
+            </div>
+            <div class="row">
+                {% if action_news %}
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="news-title">
+                        <h2>行业<span>动<a>态</a></span></h2>
+                    </div>
+                    {% for n in action_news %}
+                    <div class="news-list">
+                        <a href="{% url 'user:news-detail' n.id %}">
+                            <span class="time"><strong>{{ n.create_time|slice:"8:" }}</strong><br>{{ n.create_time|slice:":7" }}</span>
+                            <h2>{{ n.title }}</h2>
+                            <p>{{ n.summarize }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <a href="{% url 'user:news-list' %}?types=行业动态" class="news-btn">查看更多</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+{% endblock content %}

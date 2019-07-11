@@ -1,0 +1,12 @@
+*__pycache__*
+
+/apps/*/migrations/*
+!/apps/*/migrations/__init__.py
+/media/*
+/static/html/*
+/static/assets-1/*
+db.sqlite3
+
+.DS_Store
+*/.DS_Store
+.DS_Store?
