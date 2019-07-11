@@ -1,14 +1,21 @@
 {% extends "center.html" %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/center-page.css' %}">
+{% endblock css %}
+
 {% block centerContent %}
 <div class="famous-content f-item">
     <h3 class="text-center"><span>云课堂</span></h3>
-    <p class="text-center"><img src="{% static 'assets/img/news/news-2.jpg' %}" alt=""></p>
+    <p class="text-remote">
+        “汉典空中课堂”网罗各个科室的权威专家，打造了一支医疗经验丰富的专家名师团队，提供专家名师的优质课程教学视频，以及名师公开课的课堂实录。“汉典空中课堂”可以通过web页面登录和手机APP登录，支持IOS系统和安卓系统，为广大医生朋友提供一个优质而便捷的教学视频在线平台。
+    </p>
+    <!-- <p class="text-center"><img src="{% static 'assets/img/news/news-2.jpg' %}" alt=""></p>
     <p class="text-center">“云课堂”是基于云计算技术的一种高效、便捷、实时互动的远程教学课堂形式。
 使用者只需要通过互联网界面，进行简单易用的操作，便可快速高效地与全球各地学生、
 教师、家长等不同用户同步分享语音、视频及数据文件，而课堂中数据的传输、处理等复杂技术
-由云课堂服务商帮助使用者进行操作。</p>
+由云课堂服务商帮助使用者进行操作。</p> -->
 </div>
 
 {% endblock centerContent %}

@@ -110,7 +110,7 @@ class IndexView(viewsets.ModelViewSet):
 
         response_data = {
             'centernav': True,
-            'current_name': '云课堂'
+            'current_name': '空中课堂'
         }
         return response_data
 

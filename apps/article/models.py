@@ -17,7 +17,7 @@ class ArticleType(models.Model):
         return self.typename
 
     class Meta:
-        verbose_name = '类别'
+        verbose_name = '新闻/文章类别'
         verbose_name_plural = verbose_name
 
 
@@ -65,7 +65,7 @@ class Articles(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = '文章'
+        verbose_name = '新闻/文章'
         verbose_name_plural = verbose_name
 
 
