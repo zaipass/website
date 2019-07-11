@@ -33,4 +33,8 @@ urlpatterns = [
         title='官网API',
         authentication_classes=[],
         permission_classes=[])),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
