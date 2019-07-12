@@ -11,6 +11,7 @@
   <!-- ========== Page Title ========== -->
   <title>{% block title %}{% endblock title %}</title>
   <!-- ========== Start Stylesheet ========== -->
+  <link rel='icon' href="{% static 'assets/img/logo.png' %}" type='image/x-icon' sizes="16x16" />
   <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
   <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" />
   <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet" />
@@ -42,7 +43,12 @@
         <div class="col-md-8 address-info text-left">
           <div class="info box">
             <ul>
-              <li><i class="fa fa-envelope"></i>hantien@handian.com</li>
+                <li>
+                    <address>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:hantien@handian.com">hantien@handian.com</a>
+                    </address>
+                </li>
               <li><i class="fa fa-phone"></i>010-56903399</li>
             </ul>
           </div>
@@ -85,7 +91,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
               class="fa fa-bars"></i></button>
-          <a class="navbar-brand" href="index.html"><img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo" /></a>
+          <a class="navbar-brand" href="{% url 'user:index' %}"><img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo" /></a>
         </div>
         <!-- End Header Navigation -->
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -194,8 +200,8 @@
               <div class="twitter-item">
                 <div class="twitter-content">
                   <p>
-                    <a href=""><img src="{% static 'assets/img/tc-1.jpg' %}" alt=""></a>
                     <a href=""><img src="{% static 'assets/img/tc-2.jpg' %}" alt=""></a></p>
+                    <a href=""><img src="{% static 'assets/img/tc-1.jpg' %}" alt=""></a>
                 </div>
               </div>
               <div class="twitter-item">
@@ -215,7 +221,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p>Copyright &copy; 2019.Company name All rights reserved.</p>
+            <p>Copyright &copy; 2019 北京汉典制药有限公司</p>
+            <p>京ICP备09033805号-1&nbsp;&nbsp;(京)-非经营性-2015-0182</p>
           </div>
           <div class="col-md-6 text-right link">
             <ul>

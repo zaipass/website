@@ -1,12 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}联系我们{% endblock title %}
-
-{% block js %}
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet" />
-{% endblock js %}
+{% block title %}汉典制药-联系我们{% endblock title %}
 
 {% block breadcrumb %}
   <!-- Start Breadcrumb     ============================================= -->
@@ -22,7 +17,7 @@
         </div>
         <div class="col-md-6 text-right pt-0">
           <ul class="breadcrumb">
-            <li><a href="index.html"><i class="fa fa-home"></i>首页</a></li>
+            <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
             <li class="active">联系我们</li>
           </ul>
         </div>

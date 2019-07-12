@@ -21,6 +21,10 @@ class ProductType(models.Model):
 class Product(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
 
+    product_num = models.IntegerField(verbose_name='药品排序',
+                                      default=1,
+                                      help_text='药品排序')
+
     name = models.CharField(max_length=50,
                             unique=True,
                             verbose_name='药品名称',

@@ -36,5 +36,5 @@ class NavBar(admin.ModelAdmin):
     list_display = ('zh_name', 'nav_num', 'nav_url', 'is_published')
 
 
-admin.site.site_header = '汉典医药官网后台管理'
-admin.site.site_title = '汉典医药官网后台管理'
+admin.site.site_header = '汉典制药官网后台管理'
+admin.site.site_title = '汉典制药官网后台管理'

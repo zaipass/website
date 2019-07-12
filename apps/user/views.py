@@ -6,11 +6,12 @@ from apps.user.models import Position
 from apps.user.decorators import decorator_template
 from apps.user.pagination import NewsListPagination
 from apps.user.serializers import IndexSerializer, PositionSerializer, PositionIndexSerializer
-from apps.user.utils import get_next_news_not_position, get_pre_news_not_position, serializer_function
+from apps.user.utils import (
+    get_next_news_not_position, get_pre_news_not_position, serializer_function
+)
 
 from apps.product.views import ProductView
-from apps.product.models import Product
-from apps.product.serializers import ProductSerializer, ProductSearchSerializer
+from apps.product.serializers import ProductSearchSerializer
 
 from apps.article.views import ArticleView
 from apps.article.models import Certificate, Articles
@@ -116,12 +117,10 @@ class IndexView(viewsets.ModelViewSet):
 
     @decorator_template(pagename='index.html')
     def list(self, request, *args, **kwargs):
-        all_products = Product.objects.all()
-
-        list_products = ProductSerializer(all_products, many=True)
+        all_products = ProductView.queryset
 
         data = {
-            'data_list': list_products.data
+            'data_list': serializer_function(ProductView, all_products, is_many=True)
         }
 
         return data
