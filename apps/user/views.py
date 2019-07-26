@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 
 from apps.user.models import Position
 from apps.user.decorators import decorator_template
-from apps.user.pagination import NewsListPagination
+from apps.user.pagination import NewsListPagination, GoodsListPagination
 from apps.user.serializers import (
     IndexSerializer, PositionSerializer, PositionIndexSerializer
 )
@@ -165,6 +165,8 @@ class IndexView(viewsets.ModelViewSet):
 
 
 class ProductNameView(ProductView):
+    pagination_class = GoodsListPagination
+
     zh_new = product_type.get('new_product')
     zh_class = product_type.get('classical_product')
 
