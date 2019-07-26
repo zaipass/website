@@ -124,10 +124,10 @@
                 <div class="item">
                   <div class="info">
                     <h4><a href="{% url 'user:product-all' data.id %}">{{ data.name }}</a></h4>
-                    <div class="overlay">
-                      <img src="{{ data.img }}" alt="">
+                    <div class="overlay" style="text-align: center;">
+                      <img src="{{ data.img }}" alt="" height="250px">
                     </div>
-                    <p>{{ data.main }}</p>
+                    <p style="overflow:hidden; text-overflow: ellipsis; height: 2em; white-space: nowrap;">{{ data.main }}</p>
                     <a class="btn btn-theme border circle btn-md" href="{% url 'user:product-all' data.id %}">了解详细</a>
                   </div>
                 </div>

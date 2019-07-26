@@ -27,7 +27,7 @@ import math
 
 
 class PositionView(viewsets.ModelViewSet):
-    queryset = Position.objects.all().order_by('-create_time')
+    queryset = Position.objects.filter(is_published=True).order_by('-create_time')
 
     def get_serializer_class(self):
         if self.action == 'recruitment':

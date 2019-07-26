@@ -150,6 +150,8 @@ class Position(models.Model):
                              verbose_name='招聘类型',
                              help_text='招聘类型')
 
+    is_published = models.BooleanField(default=True, verbose_name='职位是否发布', help_text='职位是否发布')
+
     def __str__(self):
         return self.position_title
 

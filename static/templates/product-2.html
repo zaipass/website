@@ -15,13 +15,12 @@
 <div class="col-md-9">
     <div class="famous-content f-item">
         <h3 class="text-center"><span>中成新品药</span></h3>
-        <p class="text-center">模块说明</p>
         <div class="row">
             {% for p in product_data.results %}
             <div class="col-md-4">
                 <div class="item-center item-service" >
                     <div class="info">
-                        <h2><img src="{{ p.img }}" alt=""></h2>
+                        <h2 class="outter-img"><img src="{{ p.img }}" alt="" class="goods-img"></h2>
                         <h4><a href="{% url 'user:product-all' p.id %}">{{ p.name }}</a></h4>
                         <p class="product-detail-info">{{ p.main }}</p>
                         <p class="detail-link"><a href="{% url 'user:product-all' p.id %}" class="link-goods">商品详情&nbsp;&raquo;</a></p>
