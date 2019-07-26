@@ -9,7 +9,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 
 class ProductView(viewsets.ModelViewSet):
-    queryset = Product.objects.all().order_by('product_num', '-create_time')
+    queryset = Product.objects.order_by('-create_time', 'product_num')
     serializer_class = ProductSerializer
     filter_backends = (SearchFilter, DjangoFilterBackend)
     filter_class = ProductNameFilter

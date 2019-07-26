@@ -10,7 +10,6 @@ label {  display: inline-block;  font-weight: normal;  margin-bottom: 5px;  max-
 a, .btn, button {  transition: all 0.35s ease-in-out;  -webkit-transition: all 0.35s ease-in-out;  -moz-transition: all 0.35s ease-in-out;  -ms-transition: all 0.35s ease-in-out;  -o-transition: all 0.35s ease-in-out;  outline: medium none;}
 a img, iframe {  border: none;}
 p {  color: #000000;  line-height: 26px;  margin: 0 0 15px;  text-transform: none;  font-weight: 400;}hr {  margin-top: 0;  margin-bottom: 0;  border: 0;  border-top: 1px solid #eee;}
-p img { margin: 20px 0;}
 pre {  display: block;  margin: 0 0 30px;  padding: 9.5px;  word-wrap: break-word;  word-break: break-all;  color: #333;  border: 1px solid #ededed;  border-radius: inherit;  background-color: #f9f9f9;  font-size: 13px;  line-height: 1.42857143;}
 input:focus, textarea:focus,  select:focus {  outline: none;  box-shadow: inherit;}
 ul {  margin: 0;  list-style-type: none;}
@@ -423,6 +422,9 @@ body, .banner-area, .banner-area div {  height: 460px;}
 .famous-area .famous-content .item-center img { width: 100%; background-color: #cdd0d3; margin-bottom: 10px;}
 .famous-area .famous-content .item-center h5 { color: #a40000; margin-bottom: 5px;}
 .famous-area .famous-content .item-center:hover { -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  transform: translateY(-2px); }
+
+.famous-area .famous-content .item-service img { width: auto; background: none; }
+.famous-area .famous-content .item-service h4 { margin-bottom: 10px; }
 
 /* ==============================================================      # news =================================================================== */
 .news-content { padding: 30px 50px; -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}

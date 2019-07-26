@@ -3,219 +3,139 @@
 
 {% block title %}汉典制药-服务与产品{% endblock title %}
 
+{% block css %}
+<link href="{% static 'assets/css/product-summary.css' %}" rel="stylesheet" />
+{% endblock css %}
 
 {% block breadcrumb %}
-  <!-- Start Breadcrumb     ============================================= -->
-  <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/5.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+<div class="breadcrumb-area min-h-a"
+    style="background-image: url({% static 'assets/img/banner/5.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
     <div class="container">
-      <div class="row banner-padding">
-        <div class="col-md-6">
-          <img src="{% static 'assets/img/title-a.png' %}" alt="">
+        <div class="row banner-padding">
+            <div class="col-md-6">
+                <img src="{% static 'assets/img/title-a.png' %}" alt="">
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6 text-right pt-0">
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                    <li class="active"><a href="{% url 'user:product' %}">服务与产品</a></li>
+                    {% block tabName%}
+                    <li class="active">医疗服务平台</li>
+                    {% endblock tabName%}
+                </ul>
+            </div>
         </div>
-        <div class="col-md-6 text-right pt-0">
-          <ul class="breadcrumb">
-            <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
-            <li class="active">服务与产品</li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- End Breadcrumb -->
+</div>
 {% endblock breadcrumb %}
 
 {% block content %}
-  <!-- Start About    ============================================= -->
-  <div class="about-area default-padding" style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="site-heading text-center">
-            <h2>医疗服务 <span>平台</span></h2>
-            <p>致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发明专利...</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="text-center">
-          <!-- Single Item -->
-          <div class="col-md-3 col-sm-6">
-            <div class="item">
-              <div class="info">
-                <h2><img src="{% static 'assets/img/service-icon-a.png' %}" alt=""></h2>
-                <h4><a href="#">名医工作站</a></h4>
-                <p>自2018 年以来，汉典医学中心蓬勃发展，先后有13个名医传承工作室落户汉典中医医院。
-                    通过汉典中医医院这个平台将数位国医大师的中医学术真正地传承下去，使其学术社会化，服务于广大患者。</p>
-                <p>首都国医名师房定亚传承工作室</p>
-                <p>首都国医名师冯世纶传承工作室</p>
-                <p>张代钊名医传承工作室</p>
-                <p>刘弼臣名医传承工作室</p>
-                <p>董宜华名医传承工作室</p>
-                <p>王庆甫名医传承工作室</p>
-                <p>郭赛珊名医传承工作室</p>
-                <p>唐先平名医传承工作室</p>
-                <p>于天源名医传承工作室</p>
-                <p>郝迎旭名医传承工作室</p>
-                <p>国医大师张灿玾传承人王燕工作室</p>
-                <p>国医大师方和谦传承人赵铁良工作室</p>
-                <p>国医大师方和谦传承人崔筱莉工作室</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Single Item -->
-          <!-- Single Item -->
-          <div class="col-md-3 col-sm-6">
-            <div class="item">
-              <div class="info">
-                <h2><img src="{% static 'assets/img/service-icon-b.png' %}" alt=""></h2>
-                <h4><a href="#">中医综合诊疗</a></h4>
-                <p>中医综合门诊具有鲜明的中医特色，团队主要构成为汉典中医医院自有医生。
-                    中医综合门诊充分发挥汉典集团在中药及制药上的优势，以汉典道地药材、
-                    精制饮片、中成药为支撑，以“大医精诚”为服务宗旨，对常见的内科疾病、
-                    妇科疾病、儿科疾病均有很好的疗效。注重对老年人的慢病管理和对职场
-                    白领的亚健康状态的调理，致力于提高老年慢病人群的生活质量、提升职
-                    \场人群的健康意识和水平。中医综合门诊同时也满足社会高端群体个性化
-                    就诊及医疗需求，为高端群体专设VIP服务通道，可享受到如家庭医生一般
-                    便捷、贴心的服务及优质的就医体验。</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Single Item -->
-          <!-- Single Item -->
-          <div class="col-md-3 col-sm-6">
-            <div class="item">
-              <div class="info">
-                <h2><img src="{% static 'assets/img/service-icon-d.png' %}" alt=""></h2>
-                <h4><a href="#">疑难杂症诊疗</a></h4>
-                <p>疑难杂病中心设有13个名医传承工作室，涉及十几个学科（风湿免疫科、
-                    中医肿瘤科、儿科、肾病科、老年病科、妇科、经方门诊、周围血管病科、
-                    皮肤病科、骨伤科、内分泌科等）。疑难杂病中心以精湛的医术、卓越的
-                    临床疗效与汉典优质的道地药材有机结合，不仅满足了普通百姓看病就医
-                    的需求、也解决了百姓“看病难"的问题，让更多疑难杂病患者能在最短时
-                    间内，得到快速、权威的诊疗。</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Single Item -->
-          <!-- Single Item -->
-          <div class="col-md-3 col-sm-6">
-            <div class="item">
-              <div class="info">
-                <h2><img src="{% static 'assets/img/service-icon-c.png' %}" alt=""></h2>
-                <h4><a href="#">中医调理</a></h4>
-                <p>中医调理门诊以”治未病“为指导理论，充分发挥中医特色优势，
-                    通过中医传统非药物疗法(包括针、灸、正骨、推拿、熏蒸、火罐、
-                    贴敷、砭石等)、中医运动养生(太极、八段锦、五禽戏等)。可以为
-                    广大患者及百姓提供个性化疾病诊疗、健康保健、养生方案，并从运
-                    动锻炼、日常饮食、精神调养、科学用药等方面进行全方位知识科普
-                    及健康管理，主要针对慢性疲劳综合症、睡眠障碍、三高、颈肩腰腿
-                    痛、呼吸系统、妇科等现代都市人常见的亚健康状态及疾病进行调理
-                    与防治。汉典中医医院还设有健康产品研发中心，以“药食同源”为理
-                    论基础，为社会不同受众群体提供食疗养生等健康产品及服务。</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Single Item -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End About -->
-  <!-- Start Services     ============================================= -->
-  <div class="services-area bg-light carousel-shadow default-padding" style="background-image: url({% static 'assets/img/service-bg.jpg' %}); background-repeat: no-repeat; background-size: auto 100%; background-position-x: center;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="site-heading text-center">
-            <h2>经典 <span>中成药</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="testimonial-items services-carousel owl-carousel owl-theme text-center">
-            {% for cpro in class_products %}
-            <!-- Single Item -->
-            <div class="item">
-              <div class="content">
-                <h4><img src="{{ cpro.img }}" alt=""></h4>
-                <a href="{% url 'user:class-product' %}?name={{ cpro.name }}&types=经典中成药"><p>{{ cpro.name }}</p></a>
-              </div>
-            </div>
-            {% endfor %}
-            <!-- End Single Item -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Services -->
-  <!-- Start Testimonials     ============================================= -->
-  <div class="product-area bg-light carousel-shadow default-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="site-heading text-center">
-            <h2>中成 <span>新药品</span></h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        
-
-        {% for new_product in new_products %}
-        <div class="text-center">
-            {% if forloop.counter|divisibleby:2 == 0 %}
-                {% for pro in new_product %}
-                <div class="col-md-3 col-sm-6" style="padding: 0;">
-                    <div class="item bg2">
-                      <div class="info">
-                        <img src="{{ pro.img }}" alt="">
-                      </div>
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="f-item link">
+                        <h4>服务与<span>产品</span></h4>
+                        <ul class="sonnav">
+                            {% block serviceName %}
+                            <li class="active"><a href="{% url 'user:product' %}">医疗服务平台<i class="fa fa-caret-right"></i></a></li>
+                            <li><a href="{% url 'user:product-class' %}">经典中成药<i class="fa fa-caret-right"></i></a></li>
+                            <li><a href="{% url 'user:product-new' %}">中成新品药<i class="fa fa-caret-right"></i></a></li>
+                            {% endblock serviceName %}
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6" style="padding: 0;">
-                    <div class="item">
-                      <div class="info">
-                        <h4><a href="{% url 'user:class-product' %}?name={{ pro.name }}&types=中成新药品">{{ pro.name }}</a></h4>
-                        <p>{{ pro.info_detail }}</p>
-                        <a class="btn btn-md" href="{% url 'user:class-product' %}?name={{ pro.name }}&types=中成新药品">了解更多</a>
-                      </div>
-                    </div>
-                </div>
-                {% endfor %}
-            {% else %}
-                {% for pro in new_product %}
-                <div class="col-md-3 col-sm-6" style="padding: 0;">
-                  <div class="item">
-                        <div class="info">
-                          <h4><a href="{% url 'user:class-product' %}?name={{ pro.name }}&types=中成新药品">{{ pro.name }}</a></h4>
-                          <p>{{ pro.info_detail }}</p>
-                          <a class="btn btn-md" href="{% url 'user:class-product' %}?name={{ pro.name }}&types=中成新药品">了解更多</a>
+                {% block innerContent %}
+                <div class="col-md-9">
+                    <div class="famous-content f-item">
+                        <h3 class="text-center"><span>医疗服务平台</span></h3>
+                        <p class="text-center">致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发明专利...</p>
+                        <div class="row">
+                            <div class="">
+                                <div class="item-center item-service">
+                                    <div class="info">
+                                        <h2><img src="{% static 'assets/img/service-icon-a.png' %}" alt=""></h2>
+                                        <h4><a href="#">名医工作站</a></h4>
+                                        <p>自2018 年以来，汉典医学中心蓬勃发展，先后有13个名医传承工作室落户汉典中医医院。
+                                            通过汉典中医医院这个平台将数位国医大师的中医学术真正地传承下去，使其学术社会化，服务于广大患者。</p>
+                                        <p>首都国医名师房定亚传承工作室</p>
+                                        <p>首都国医名师冯世纶传承工作室</p>
+                                        <p>张代钊名医传承工作室</p>
+                                        <p>刘弼臣名医传承工作室</p>
+                                        <p>董宜华名医传承工作室</p>
+                                        <p>王庆甫名医传承工作室</p>
+                                        <p>郭赛珊名医传承工作室</p>
+                                        <p>唐先平名医传承工作室</p>
+                                        <p>于天源名医传承工作室</p>
+                                        <p>郝迎旭名医传承工作室</p>
+                                        <p>国医大师张灿玾传承人王燕工作室</p>
+                                        <p>国医大师方和谦传承人赵铁良工作室</p>
+                                        <p>国医大师方和谦传承人崔筱莉工作室</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="item-center item-service">
+                                    <div class="info">
+                                        <h2><img src="{% static 'assets/img/service-icon-b.png' %}" alt=""></h2>
+                                        <h4><a href="#">中医综合诊疗</a></h4>
+                                        <p>中医综合门诊具有鲜明的中医特色，团队主要构成为汉典中医医院自有医生。
+                                            中医综合门诊充分发挥汉典集团在中药及制药上的优势，以汉典道地药材、
+                                            精制饮片、中成药为支撑，以“大医精诚”为服务宗旨，对常见的内科疾病、
+                                            妇科疾病、儿科疾病均有很好的疗效。注重对老年人的慢病管理和对职场
+                                            白领的亚健康状态的调理，致力于提高老年慢病人群的生活质量、提升职
+                                            \场人群的健康意识和水平。中医综合门诊同时也满足社会高端群体个性化
+                                            就诊及医疗需求，为高端群体专设VIP服务通道，可享受到如家庭医生一般
+                                            便捷、贴心的服务及优质的就医体验。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="item-center item-service">
+                                    <div class="info">
+                                        <h2><img src="{% static 'assets/img/service-icon-d.png' %}" alt=""></h2>
+                                        <h4><a href="#">疑难杂症诊疗</a></h4>
+                                        <p>疑难杂病中心设有13个名医传承工作室，涉及十几个学科（风湿免疫科、
+                                            中医肿瘤科、儿科、肾病科、老年病科、妇科、经方门诊、周围血管病科、
+                                            皮肤病科、骨伤科、内分泌科等）。疑难杂病中心以精湛的医术、卓越的
+                                            临床疗效与汉典优质的道地药材有机结合，不仅满足了普通百姓看病就医
+                                            的需求、也解决了百姓“看病难"的问题，让更多疑难杂病患者能在最短时
+                                            间内，得到快速、权威的诊疗。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="item-center item-service">
+                                    <div class="info">
+                                        <h2><img src="{% static 'assets/img/service-icon-c.png' %}" alt=""></h2>
+                                        <h4><a href="#">中医调理</a></h4>
+                                        <p>中医调理门诊以”治未病“为指导理论，充分发挥中医特色优势，
+                                            通过中医传统非药物疗法(包括针、灸、正骨、推拿、熏蒸、火罐、
+                                            贴敷、砭石等)、中医运动养生(太极、八段锦、五禽戏等)。可以为
+                                            广大患者及百姓提供个性化疾病诊疗、健康保健、养生方案，并从运
+                                            动锻炼、日常饮食、精神调养、科学用药等方面进行全方位知识科普
+                                            及健康管理，主要针对慢性疲劳综合症、睡眠障碍、三高、颈肩腰腿
+                                            痛、呼吸系统、妇科等现代都市人常见的亚健康状态及疾病进行调理
+                                            与防治。汉典中医医院还设有健康产品研发中心，以“药食同源”为理
+                                            论基础，为社会不同受众群体提供食疗养生等健康产品及服务。</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-md-3 col-sm-6" style="padding: 0;">
-                  <div class="item bg2">
-                    <div class="info">
-                      <img src="{{ pro.img }}" alt="">
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-            {% endif %}
+                {% endblock innerContent %}
+            </div>
+
         </div>
-        {% endfor %}
-      </div>
     </div>
-  </div>
-  <!-- End Testimonials -->
+
 {% endblock content %}
 
 {% block js %}

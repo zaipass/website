@@ -123,12 +123,12 @@
             {% for data in data_list %}
                 <div class="item">
                   <div class="info">
-                    <h4><a href="{% url 'user:class-product' %}?name={{ data.name }}">{{ data.name }}</a></h4>
+                    <h4><a href="{% url 'user:product-all' data.id %}">{{ data.name }}</a></h4>
                     <div class="overlay">
                       <img src="{{ data.img }}" alt="">
                     </div>
                     <p>{{ data.main }}</p>
-                    <a class="btn btn-theme border circle btn-md" href="{% url 'user:class-product' %}?name={{ data.name }}">了解详细</a>
+                    <a class="btn btn-theme border circle btn-md" href="{% url 'user:product-all' data.id %}">了解详细</a>
                   </div>
                 </div>
             {% endfor %}

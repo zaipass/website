@@ -14,7 +14,9 @@ urlpatterns = [
     path('center_class/', IndexView.as_view({'get': 'center_class'}), name='center-class'),
 
     # the product
-    path('class-product/', ProductNameView.as_view({'get': 'list'}), name='class-product'),
+    path('product/class_product/', ProductNameView.as_view({'get': 'class_product'}), name='product-class'),
+    path('product/new_product/', ProductNameView.as_view({'get': 'new_product'}), name='product-new'),
+    path('product/<int:pk>/', ProductNameView.as_view({'get': 'list'}), name='product-all'),
     path('product/', ProductNameView.as_view({'get': 'product'}), name='product'),
 
     path('news/', ArticleTypesView.as_view({'get': 'list'}), name='news'),

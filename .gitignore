@@ -6,6 +6,8 @@
 
 /static/html/*
 /static/assets-1/*
+/static/assets/csso/*
+/media/*
 db.sqlite3
 
 .DS_Store

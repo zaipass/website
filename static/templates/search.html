@@ -38,7 +38,7 @@
                 {% if objects %}
                     {% for n in objects %}
                     <div class="news-list">
-                        <a href="{% url 'user:class-product' %}?name={{ n.name }}">
+                        <a href="{% url 'user:product-all' n.id %}">
                             <span class="time"><strong>&nbsp;&nbsp;{{ forloop.counter }}</strong><br></span>
                             <h2>{{ n.name }}</h2>
                             <p>功能主治: {{ n.main }}</p>
@@ -54,13 +54,11 @@
                     </div>
                 {% endif %}
             </div>
-        </div> 
+        </div>
       </div>
-      
+
     </div>
   </div>
   <!-- End About -->
 
 {% endblock content %}
-
-

@@ -1,16 +1,20 @@
 # from rest_framework.response import Response
 from rest_framework import viewsets
+from rest_framework.exceptions import NotFound
 from rest_framework.decorators import action
 
 from apps.user.models import Position
 from apps.user.decorators import decorator_template
 from apps.user.pagination import NewsListPagination
-from apps.user.serializers import IndexSerializer, PositionSerializer, PositionIndexSerializer
+from apps.user.serializers import (
+    IndexSerializer, PositionSerializer, PositionIndexSerializer
+)
 from apps.user.utils import (
     get_next_news_not_position, get_pre_news_not_position, serializer_function
 )
 
 from apps.product.views import ProductView
+from apps.product.models import Product
 from apps.product.serializers import ProductSearchSerializer
 
 from apps.article.views import ArticleView
@@ -69,7 +73,9 @@ class PositionView(viewsets.ModelViewSet):
         )
 
         return {
-            'position_info': serializer_function(ArticleView, position_articles, is_many=True),
+            'position_info': serializer_function(
+                ArticleView, position_articles, is_many=True
+            ),
             'position_society': serializer_position_society.data,
             'position_student': serializer_position_student.data
         }
@@ -163,86 +169,55 @@ class ProductNameView(ProductView):
     zh_class = product_type.get('classical_product')
 
     def get_queryset(self):
-        tps = self.request.query_params.get('types')
+        if self.action == 'class_product':
+            return super().queryset.filter(types__typename=self.zh_class)
+        elif self.action == 'new_product':
+            return super().queryset.filter(types__typename=self.zh_new)
+        return super().queryset
 
-        if tps == self.zh_class:
-            return super().get_queryset().filter(types__typename=self.zh_class)
-        elif tps == self.zh_new:
-            return super().get_queryset().filter(types__typename=self.zh_new)
+    def get_product(self, req, *args, **kwargs):
+        current_page = req.query_params.get('page', 1)
 
-        return super().get_queryset()
-
-    # def get_serializer(self, *args, **kwargs):
-    #     """
-    #     get_serializer and serializer of difference: override GeneriView get_serializer()
-    #     """
-    #     serializer_class = self.get_serializer_class()
-    #     return serializer_class(*args, **kwargs)
+        try:
+            response = super().list(req, *args, **kwargs)
+        except NotFound:
+            return {
+                'error': True,
+                'render_url': '/product/'
+            }
+        else:
+            data = {
+                'product_data': response.data if response.data else None,
+                'current_page': current_page if current_page else 1,
+                'productnav': True,
+            }
+            return data
 
     @action(detail=False)
     @decorator_template(pagename='product.html')
     def product(self, request, *args, **kwargs):
+        return dict()
 
-        class_products = self.get_queryset().filter(types__typename=self.zh_class)
+    @action(detail=False)
+    @decorator_template(pagename='product-1.html')
+    def class_product(self, request, *args, **kwargs):
+        return self.get_product(request, *args, **kwargs)
 
-        # class_serializer = self.serializer_class(class_products, many=True)
-        class_list_product = serializer_function(self, class_products, is_many=True)
+    @action(detail=False)
+    @decorator_template(pagename='product-2.html')
+    def new_product(self, request, *args, **kwargs):
+        return self.get_product(request, *args, **kwargs)
 
-        # new products
-        new_products = self.get_queryset().filter(types__typename=self.zh_new)
-        # new_serializer = self.serializer_class(new_products, many=True)
-        new_list_product = serializer_function(self, new_products, is_many=True)
-
-        rows = math.ceil(len(new_list_product) / 2)
-
-        new_list = []
-        index = 0
-
-        for row in range(rows):
-            data = new_list_product[index:index + 2]
-            index += 2
-            new_list.append(data)
+    @decorator_template(pagename='product-detail.html')
+    def list(self, request, *args, **kwargs):
+        response = super().retrieve(request, *args, **kwargs)
+        serializer = ProductSearchSerializer(self.get_queryset(), many=True)
 
         data = {
-            'class_products': class_list_product,
-            'new_products': new_list,
-        }
-
-        return data
-
-    @decorator_template(pagename='one-product.html')
-    def list(self, request, *args, **kwargs):
-        data = {}
-
-        # if no params 'types': return '/product/' page
-        current_types = request.query_params.get('types')
-        # if not current_types:
-        #     data['error'] = True
-        #     data['render_url'] = '/product/'
-        #     return data
-        try:
-            # ?name=
-            view_response = super().list(self, request, *args, **kwargs)
-
-            if len(view_response.data) != 1:
-                data['error'] = True
-                data['render_url'] = '/product/'
-                return data
-
-        except Exception as e:
-            print(e, '=w==')
-            data['error'] = True
-            data['render_url'] = '/product/'
-            return data
-        # all classical products
-        class_products = self.get_queryset()
-
-        data.update({
-            'product': view_response.data[0],
+            'product': response.data,
+            'product_name_list': serializer.data,
             'productnav': True,
-            'current_types': current_types,
-            'classical_name_list': class_products,
-        })
+        }
 
         return data
 
