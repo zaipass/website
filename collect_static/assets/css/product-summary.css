@@ -1,0 +1,30 @@
+.product-detail-info {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    height: 2em;
+    white-space: nowrap;
+    max-height: 2em;
+}
+
+.detail-link {
+    padding: 0px;
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+.link-goods {
+    color: rgb(145, 0, 3);
+}
+
+.outter-img {
+    text-align: center;
+}
+
+.goods-img {
+    height: 180px;
+}
+
+.pagination .active-page {
+    background-color: rgb(145, 0, 3)!important;
+    color: white!important;
+}

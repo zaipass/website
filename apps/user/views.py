@@ -14,7 +14,6 @@ from apps.user.utils import (
 )
 
 from apps.product.views import ProductView
-from apps.product.models import Product
 from apps.product.serializers import ProductSearchSerializer
 
 from apps.article.views import ArticleView
@@ -22,8 +21,6 @@ from apps.article.models import Certificate, Articles
 from apps.article.serializers import CertificateSerializer
 
 from apps.user.constants import product_type, news_type, position_type
-
-import math
 
 
 class PositionView(viewsets.ModelViewSet):
@@ -54,7 +51,7 @@ class PositionView(viewsets.ModelViewSet):
                 return response_data
 
         response_data['error'] = True
-        response_data['render_url'] = '/recruitment/'
+        response_data['render_url'] = '/'
         return response_data
 
     @action(detail=False)
@@ -214,6 +211,7 @@ class ProductNameView(ProductView):
     def list(self, request, *args, **kwargs):
         response = super().retrieve(request, *args, **kwargs)
         serializer = ProductSearchSerializer(self.get_queryset(), many=True)
+        print(response.data, '==')
 
         data = {
             'product': response.data,
@@ -302,7 +300,7 @@ class ArticleTypesView(ArticleView):
 
         if not types or types == position_type:
             response_data['error'] = True
-            response_data['render_url'] = '/news/'
+            response_data['render_url'] = '/'
             return response_data
 
         try:

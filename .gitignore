@@ -4,6 +4,11 @@
 /apps/*/migrations/*
 !/apps/*/migrations/__init__.py
 
+uwsgi.ini
+uwsgi.log
+uwsgi.pid
+website.sublime*
+
 /static/html/*
 /static/assets-1/*
 /static/assets/csso/*
