@@ -17,8 +17,8 @@
         </div>
         <div class="col-md-6 text-right pt-0">
           <ul class="breadcrumb">
-            <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
-            <li><a href="/center.html">医学中心</a></li>
+            <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+            <li><a href="{% url 'user:center' %}">医学中心</a></li>
             <li class="active">{{ current_name }}</li>
           </ul>
         </div>
@@ -38,19 +38,19 @@
             <h4>医学<span>中心</span></h4>
             <ul class="sonnav">
                 <li {% if current_name == '国家专利技术' %} class="active" {% endif %}>
-                    <a href="/center.html">国家专利技术<i class="fa fa-caret-right"></i>
+                    <a href="{% url 'user:center' %}">国家专利技术<i class="fa fa-caret-right"></i>
                     </a>
                 </li>
                 <li {% if current_name == '远程医疗' %} class="active" {% endif %}>
-                    <a href="/center-1.html">远程医疗<i class="fa fa-caret-right"></i>
+                    <a href="{% url 'user:center-remote' %}">远程医疗<i class="fa fa-caret-right"></i>
                     </a>
                 </li>
                 <li {% if current_name == '医学中心' %} class="active" {% endif %}>
-                    <a href="/center-2.html">医学中心<i class="fa fa-caret-right"></i>
+                    <a href="{% url 'user:center-hospital' %}">医学中心<i class="fa fa-caret-right"></i>
                     </a>
                 </li>
                 <li {% if current_name == '空中课堂' %} class="active" {% endif %}>
-                    <a href="/center-3.html">空中课堂<i class="fa fa-caret-right"></i>
+                    <a href="{% url 'user:center-class' %}">空中课堂<i class="fa fa-caret-right"></i>
                     </a>
                 </li>
             </ul>

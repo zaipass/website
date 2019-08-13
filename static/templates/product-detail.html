@@ -18,8 +18,8 @@
             </div>
             <div class="col-md-6 text-right pt-0">
                 <ul class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
-                    <li><a href="/product.html">服务与产品</a></li>
+                    <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                    <li><a href="{% url 'user:product' %}">服务与产品</a></li>
                     <li class="active">{{ product.name }}</li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
                     <ul class="sonnav">
                         {% for proname in product_name_list %}
                         <li {% if product.name == proname.name %} class="active" {% endif %}>
-                            <a href="/product/product-{{ proname.id }}.html">
+                            <a href="{% url 'user:product-all' proname.id %}">
                                 {{ proname.name }}
                                 <i class="fa fa-caret-right"></i>
                             </a>

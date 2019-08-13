@@ -50,7 +50,7 @@
                 名医传承工作室专家等全国名老中医到青年中医医师的丰富人
                 才梯队数十人，涉及9 大学科，以满足不同患者的就医需求。
             </p>
-            <p><a href="/famous.html">了解详情</a></p>
+            <p><a href="{% url 'user:famous' %}">了解详情</a></p>
           </div>
         </div>
       </div>
@@ -124,12 +124,12 @@
             {% for data in data_list %}
                 <div class="item">
                   <div class="info">
-                    <h4><a href="/product/product-{{ data.id }}.html">{{ data.name }}</a></h4>
+                    <h4><a href="{% url 'user:product-all' data.id %}">{{ data.name }}</a></h4>
                     <div class="overlay" style="text-align: center;">
                       <img src="{{ data.img }}" alt="" height="250px">
                     </div>
                     <p style="overflow:hidden; text-overflow: ellipsis; height: 2em; white-space: nowrap;">{{ data.main }}</p>
-                    <a class="btn btn-theme border circle btn-md" href="/product/product-{{ data.id }}.html">了解详细</a>
+                    <a class="btn btn-theme border circle btn-md" href="{% url 'user:product-all' data.id %}">了解详细</a>
                   </div>
                 </div>
             {% endfor %}

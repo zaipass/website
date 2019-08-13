@@ -88,10 +88,6 @@ class NavBar(models.Model):
     zh_name = models.CharField(verbose_name='导航名称',
                                help_text='导航名称',
                                max_length=20)
-    nav_html = models.CharField(verbose_name='静态文件名称',
-                                help_text='静态文件名称',
-                                unique=True,
-                                max_length=200,)
     nav_url = models.CharField(verbose_name='导航路径',
                                help_text='导航路径',
                                null=True,

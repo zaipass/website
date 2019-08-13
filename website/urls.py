@@ -26,7 +26,6 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
     path('', include(('apps.user.urls', 'user'), namespace='user')),
-    path('hd/', include(('apps.user.urls', 'user'), namespace='user-hd')),
     path('goods/', include(('apps.product.urls', 'goods'), namespace='goods')),
     path('articles/', include(('apps.article.urls', 'articles'), namespace='articles')),
 

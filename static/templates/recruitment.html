@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-md-6 text-right pt-0">
                     <ul class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
                         <li class="active">招贤纳士</li>
                     </ul>
                 </div>
@@ -53,7 +53,7 @@
                     {% for po in position_society %}
                     <div class="col-md-6">
                         <div class="news-list recruitment-list">
-                            <a href="/position/position-{{ po.id }}.html">
+                            <a href="{% url 'user:recruitment-position' po.id %}">
                                 <span class="time"><strong>25</strong><br>2019-12</span>
                                 <h2>{{ po.position_title }}</h2>
                                 <p>{{ po.work_experience }}</p>
@@ -75,7 +75,7 @@
                     {% for po in position_student %}
                     <div class="col-md-6">
                         <div class="news-list recruitment-list">
-                            <a href="/position/position-{{ po.id }}.html">
+                            <a href="{% url 'user:recruitment-position' po.id %}">
                                 <span class="time"><strong>25</strong><br>2019-12</span>
                                 <h2>{{ po.position_title }}</h2>
                                 <p>{{ po.work_experience }}</p>

@@ -17,8 +17,8 @@
                 </div>
                 <div class="col-md-6 text-right pt-0">
                     <ul class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
-                        <li><a href="/news.html"><i class="fa fa-home"></i>新闻动态</a></li>
+                        <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="{% url 'user:news' %}"><i class="fa fa-home"></i>新闻动态</a></li>
                         <li class="active">
                             {% if news.title|length > 5 %}
                                 {{ news.title|slice:":5" }}...
@@ -47,7 +47,7 @@
                             <p style="text-indent: 0">
                                 <span>
                                     {% if previous %}
-                                    <a href="/news/news-{{ previous.id }}.html">
+                                    <a href="{% url 'user:news-detail' previous.id %}">
                                         上一篇: <span>{{ previous.title }}</span> 
                                     </a>
                                     {% endif %}
@@ -55,7 +55,7 @@
                                 <br>
                                 <span class="text-right">
                                     {% if next %}
-                                    <a href="/news/news-{{ next.id }}.html">
+                                    <a href="{% url 'user:news-detail' next.id %}">
                                         下一篇: <span>{{ next.title }}</span> 
                                     </a>
                                     {% endif %}

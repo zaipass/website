@@ -19,8 +19,8 @@
                 </div>
                 <div class="col-md-6 text-right pt-0">
                     <ul class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
-                        <li><a href="/news.html">新闻动态</a></li>
+                        <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="{% url 'user:news' %}">新闻动态</a></li>
                         <li class="active">汉典新闻</li>
                     </ul>
                 </div>
@@ -46,7 +46,7 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-md-4 col-sm-12"><img src="{{ nl.img_header }}" alt="" /></div>
                                         <div class="col-lg-8 col-md-8 col-sm-12">
-                                            <a href="/news/news-{{ nl.id }}.html">
+                                            <a href="{% url 'user:news-detail' nl.id %}">
                                                 <h3>{{ nl.title }}</h3>
                                                 <p><span>{{ nl.create_time }}</span></p>
                                                 <p>{{ nl.summarize }}</p>
@@ -56,7 +56,7 @@
                                 </div>
                             {% else %}
                                 <div class="news-list">
-                                    <a href="/news/news-{{ nl.id }}.html">
+                                    <a href="{% url 'user:news-detail' nl.id %}">
                                         <span class="time"><strong>{{ nl.create_time|slice:"8:" }}</strong><br>{{ nl.create_time|slice:":7" }}</span>
                                         <h2>{{ nl.title }}</h2>
                                         <p>{{ nl.summarize }}</p>

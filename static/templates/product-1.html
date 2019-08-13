@@ -7,9 +7,9 @@
 {% endblock tabName%}
 
 {% block serviceName %}
-<li><a href="/product.html">医疗服务平台<i class="fa fa-caret-right"></i></a></li>
-<li class="active"><a href="/product-classical.html">经典中成药<i class="fa fa-caret-right"></i></a></li>
-<li><a href="/product-new.html">中成新品药<i class="fa fa-caret-right"></i></a></li>
+<li><a href="{% url 'user:product' %}">医疗服务平台<i class="fa fa-caret-right"></i></a></li>
+<li class="active"><a href="{% url 'user:product-class' %}">经典中成药<i class="fa fa-caret-right"></i></a></li>
+<li><a href="{% url 'user:product-new' %}">中成新品药<i class="fa fa-caret-right"></i></a></li>
 {% endblock serviceName %}
 
 {% block innerContent %}
@@ -22,9 +22,9 @@
                 <div class="item-center item-service">
                     <div class="info">
                         <h2 class="outter-img"><img src="{{ p.img }}" alt="" class="goods-img"></h2>
-                        <h4><a href="/product/product-{{ p.id }}.html">{{ p.name }}</a></h4>
+                        <h4><a href="{% url 'user:product-all' p.id %}">{{ p.name }}</a></h4>
                         <p class="product-detail-info">{{ p.main }}</p>
-                        <p class="detail-link"><a href="/product/product-{{ p.id }}.html" class="link-goods">商品详情&nbsp;&raquo;</a></p>
+                        <p class="detail-link"><a href="{% url 'user:product-all' p.id %}" class="link-goods">商品详情&nbsp;&raquo;</a></p>
                     </div>
                 </div>
             </div>
