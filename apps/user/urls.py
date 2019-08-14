@@ -4,12 +4,12 @@ from apps.user.views import (
 )
 
 urlpatterns = [
+    # path('', IndexView.as_view({'get': 'list'}), name='index'),
     path('', IndexView.as_view({'get': 'list'}), name='index'),
-    path('about/', IndexView.as_view({'get': 'about'}), name='about'),
     path('famous/', IndexView.as_view({'get': 'famous'}), name='famous'),
     path('center/', IndexView.as_view({'get': 'center'}), name='center'),
     path('contact/', IndexView.as_view({'get': 'contact'}), name='contact'),
-    path('center_remote/', IndexView.as_view({'get': 'center_remote'}), name='center-remote'),
+    path('center_famous/', IndexView.as_view({'get': 'center_famous'}), name='center-famous'),
     path('center_hospital/', IndexView.as_view({'get': 'center_hospital'}), name='center-hospital'),
     path('center_class/', IndexView.as_view({'get': 'center_class'}), name='center-class'),
 

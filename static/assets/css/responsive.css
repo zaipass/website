@@ -478,7 +478,8 @@ nav.navbar .quote-btn {
 .services-details-area .sidebar {
     margin-top: 50px;
 }  /* Chose Us */	.chose-us-area .thumb {
-    min-height: 300px;
+    min-height: 390px;
+	margin-top: 83%
 }
 
 .chose-us-area.item-half .container-full .row >.info {

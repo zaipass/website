@@ -238,7 +238,7 @@ body, .banner-area, .banner-area div {  height: 460px;}
 .about-area .info h4 { font-weight: 600; }
 .about-area .info h2 { border: 1px solid #ddd; border-radius: 50%; display: inline-block; padding: 20px; }
 .about-area .img {  margin-top: -100px; margin-left: 100px;}
-.about-area .img2 {  margin-top: -60px; margin-left: 0;}
+.about-area .img2 {  margin-top: -140px; margin-left: 0;}
 .about-area p a { width: 140px; height: 36px; background-image: url(../img/btn-bg.png); background-repeat: no-repeat; display: block; text-align: center; padding: 5px 0; }
 
 /* ==============================================================      # Features =================================================================== */
@@ -405,11 +405,12 @@ body, .banner-area, .banner-area div {  height: 460px;}
 .famous-area .f-item h3 span::after {  position: absolute;  left: -22px;  bottom: 4px;  content: ""; width: 14px; height: 14px;  background: url(../img/title-bg.png) no-repeat;}
 .famous-area .f-item h3 span::before {  position: absolute;  right: -22px;  bottom: 4px;  content: ""; width: 14px; height: 14px;  background: url(../img/title-bg.png) no-repeat;}
 .famous-area .famous-content div { padding: 0 !important; margin-bottom: 10px; }
-.famous-area .famous-content a.tab { display: inline-block; padding: 4px 0; min-width: 136px; max-width: 136px; background-image: url(../img/btn-bg-b.png); background-repeat: no-repeat; }
+.famous-area .famous-content a.tab { display: inline-block; padding: 3px 0; min-width: 120px; max-width: 120px; background-image: url(../img/btn-bg-b.png); background-repeat: no-repeat; }
 .famous-area .famous-content a.tab:hover { color: #a40000;}
 
 .famous-area .famous-content .item { border: 1px solid #bc9355; margin: 10px; padding: 20px !important; position: relative; background: url(../img/bg-3.png) no-repeat; background-position: -1px -1px; }
 .famous-area .famous-content .item .header { width: 88px; height: 88px; border-radius: 44px; border: 1px solid #a7a7a7; position: absolute; top: 20px; left: 20px; }
+.famous-area .famous-content .item .header img { border-radius: 44px; }
 .famous-area .famous-content .item ul { padding-left: 110px; }
 .famous-area .famous-content .item ul li { color: #000; font-size: 18px; }
 .famous-area .famous-content .item ul li span { font-size: 14px; }
@@ -418,7 +419,7 @@ body, .banner-area, .banner-area div {  height: 460px;}
 .famous-area .famous-content .item ul a.appointment { border: 1px solid #a40000; display: inline-block; padding: 0px 20px; margin-top: 10px; color: #a40000; background: url(../img/btn-bg-c.png) no-repeat; background-position: -1px -1px; }
 .famous-area .famous-content .item ul a.appointment i { margin-right: 5px; }
 
-.famous-area .famous-content .item-center { border: 1px solid #ddd; margin: 10px; padding: 15px !important; min-height: 336px; transition: box-shadow .2s ease-in-out,transform .2s ease-in-out; }
+.famous-area .famous-content .item-center { border: 1px solid #ddd; margin: 10px; padding: 15px !important; /*min-height: 336px;*/ transition: box-shadow .2s ease-in-out,transform .2s ease-in-out; }
 .famous-area .famous-content .item-center img { width: 100%; background-color: #cdd0d3; margin-bottom: 10px;}
 .famous-area .famous-content .item-center h5 { color: #a40000; margin-bottom: 5px;}
 .famous-area .famous-content .item-center:hover { -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  transform: translateY(-2px); }
@@ -584,6 +585,8 @@ footer .f-item i { font-size: 14px; margin-right: 10px; width: 16px; text-align:
 .modal-body { padding: 0 15px; padding-top: 10px; text-align: center; }
 .modal-body img { margin: 20px 0; }
 
+.breadcrumb > li + li:before { content: ""; padding: 0; }
+
 @media (max-width: 767px) {
     .about-area .img {  margin-top: 0 !important; margin-left: 0 !important;}
 
@@ -605,5 +608,7 @@ footer .f-item i { font-size: 14px; margin-right: 10px; width: 16px; text-align:
     .min-h-a { min-height: auto !important; }
 
     .pt-0 { padding: 0; text-align: left !important;}
+	
+	.news-text p { text-indent: 0; }
 
 }

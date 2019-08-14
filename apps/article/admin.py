@@ -12,7 +12,7 @@ class ArticlesAdmin(admin.ModelAdmin):
             'img_header', 'title',
             'sub_title', 'summarize', 'content'
         )}),
-        (_('重要信息'), {'fields': ('types', 'is_published')}),
+        (_('重要信息'), {'fields': ('types', 'is_published', 'is_top')}),
     )
     search_fields = ('user', 'types', 'title', 'content')
 

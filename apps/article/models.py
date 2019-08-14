@@ -59,6 +59,8 @@ class Articles(models.Model):
     is_published = models.BooleanField(verbose_name='是否发布',
                                        default=False,
                                        help_text='是否发布')
+    is_top = models.BooleanField(verbose_name='是否置顶', default=False, help_text='是否置顶')
+
     user = models.ForeignKey(MyUser, related_name='article', on_delete=models.CASCADE)
 
     def __str__(self):

@@ -14,7 +14,6 @@ from apps.user.utils import (
 )
 
 from apps.product.views import ProductView
-from apps.product.models import Product
 from apps.product.serializers import ProductSearchSerializer
 
 from apps.article.views import ArticleView
@@ -22,8 +21,6 @@ from apps.article.models import Certificate, Articles
 from apps.article.serializers import CertificateSerializer
 
 from apps.user.constants import product_type, news_type, position_type
-
-import math
 
 
 class PositionView(viewsets.ModelViewSet):
@@ -93,11 +90,11 @@ class IndexView(viewsets.ModelViewSet):
 
     @action(detail=False)
     @decorator_template(pagename='center-1.html')
-    def center_remote(self, request, *args, **kwargs):
+    def center_famous(self, request, *args, **kwargs):
 
         response_data = {
             'centernav': True,
-            'current_name': '远程医疗'
+            'current_name': '名医咨询'
         }
         return response_data
 
@@ -123,17 +120,6 @@ class IndexView(viewsets.ModelViewSet):
 
     @decorator_template(pagename='index.html')
     def list(self, request, *args, **kwargs):
-        all_products = ProductView.queryset
-
-        data = {
-            'data_list': serializer_function(ProductView, all_products, is_many=True)
-        }
-
-        return data
-
-    @action(detail=False)
-    @decorator_template(pagename='about.html')
-    def about(self, request, *args, **kwargs):
         certificates = Certificate.objects.all().order_by('-create_time')
 
         certificate_serializer = CertificateSerializer(certificates, many=True)
@@ -239,8 +225,12 @@ class ArticleTypesView(ArticleView):
     @decorator_template(pagename='news.html')
     def list(self, request, *args, **kwargs):
         try:
-            news_list = self.get_queryset().filter(
-                types__typename=news_type.get('handian_news'))[:4]
+            object_list = self.get_queryset().filter(types__typename=news_type.get('handian_news'))
+
+            news_list = object_list.order_by('-is_top', '-create_time')
+
+            # news_list = self.get_queryset().filter(types__typename=news_type.get('handian_news'))[:4]
+
         except Exception:
             news_list = None
 
