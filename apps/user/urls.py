@@ -6,6 +6,10 @@ from apps.user.views import (
 urlpatterns = [
     # path('', IndexView.as_view({'get': 'list'}), name='index'),
     path('', IndexView.as_view({'get': 'list'}), name='index'),
+    path('index_hd/', IndexView.as_view({'get': 'index_hd'}), name='index-hd'),
+    path('index_cy/', IndexView.as_view({'get': 'index_cy'}), name='index-cy'),
+    path('index_zy/', IndexView.as_view({'get': 'index_zy'}), name='index-zy'),
+
     path('famous/', IndexView.as_view({'get': 'famous'}), name='famous'),
     path('center/', IndexView.as_view({'get': 'center'}), name='center'),
     path('contact/', IndexView.as_view({'get': 'contact'}), name='contact'),

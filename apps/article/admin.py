@@ -28,4 +28,4 @@ class ArticleTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Certificate)
 class CertificateAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content')
+    list_display = ('title', 'content', 'cert_type')

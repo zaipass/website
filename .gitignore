@@ -11,6 +11,7 @@
 /media/*
 db.sqlite3
 
+website.sublime*
 
 .DS_Store
 */.DS_Store

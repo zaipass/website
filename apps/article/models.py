@@ -84,6 +84,11 @@ class Certificate(models.Model):
     content = models.TextField(max_length=800,
                                verbose_name='证书详情',
                                help_text='证书详情')
+    CERT_TYPE_CHOICE = (
+        ('专利', '专利'),
+        ('荣誉', '荣誉')
+    )
+    cert_type = models.CharField(max_length=4, choices=CERT_TYPE_CHOICE, verbose_name='证书类型', help_text='证书类型')
 
     def __str__(self):
         return self.title

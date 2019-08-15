@@ -120,7 +120,7 @@ class IndexView(viewsets.ModelViewSet):
 
     @decorator_template(pagename='index.html')
     def list(self, request, *args, **kwargs):
-        certificates = Certificate.objects.all().order_by('-create_time')
+        certificates = Certificate.objects.filter(cert_type='荣誉').order_by('-create_time')
 
         certificate_serializer = CertificateSerializer(certificates, many=True)
 
@@ -130,6 +130,18 @@ class IndexView(viewsets.ModelViewSet):
 
         return data
 
+    @decorator_template(pagename='index-1.html')
+    def index_hd(self, request, *args, **kwargs):
+        return {'abouthd': True}
+
+    @decorator_template(pagename='index-2.html')
+    def index_cy(self, request, *args, **kwargs):
+        return {'abouthd': True}
+
+    @decorator_template(pagename='index-3.html')
+    def index_zy(self, request, *args, **kwargs):
+        return {'abouthd': True}
+
     @action(detail=False)
     @decorator_template(pagename='famous.html')
     def famous(self, request, *args, **kwargs):
@@ -138,7 +150,7 @@ class IndexView(viewsets.ModelViewSet):
     @action(detail=False)
     @decorator_template(pagename='center.html')
     def center(self, request, *args, **kwargs):
-        certificates = Certificate.objects.all().order_by('-create_time')
+        certificates = Certificate.objects.filter(cert_type='专利').order_by('-create_time')
 
         certificate_serializer = CertificateSerializer(certificates, many=True)
 

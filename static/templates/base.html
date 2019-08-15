@@ -143,6 +143,14 @@
                     <em></em>{{ nav.zh_name }}</a>
                 </li>
                 {% endfor %}
+            {% elif abouthd %}
+
+                {% for nav in navbar %}
+                <li {% if nav.zh_name == '走进汉典' %} class="active" {% endif %}>
+                    <a href="{{ nav.nav_url }}">
+                    <em></em>{{ nav.zh_name }}</a>
+                </li>
+                {% endfor %}
 
             {% else %}
 
