@@ -66,9 +66,9 @@
                     {% for cert in certs %}
                         <div class="col-md-4">
                             <div class="item-center">
-                                <img src="{{ cert.img }}" alt="">
-                                <h5>{{ cert.title }}</h5>
-                                <p>{{ cert.content }}</p>
+                                <img src="{{ cert.img }}" alt="" height="320">
+                                <h5 style="overflow:hidden;">{{ cert.title }}</h5>
+                                <p style="overflow:hidden; text-overflow: ellipsis;height: 2em; white-space: nowrap;">{{ cert.content }}</p>
                             </div>
                         </div>
                     {% endfor %}

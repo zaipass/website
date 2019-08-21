@@ -1,0 +1,24 @@
+.link-goods {
+    color: rgb(145, 0, 3);
+} 
+
+.outter-img {
+    text-align: center;
+}
+
+.goods-img {
+    height: 180px;
+}
+
+.product-detail-info{
+    overflow:hidden; 
+    text-overflow: ellipsis;
+    height: 2em; 
+    white-space: nowrap;   
+    margin-bottom: 0px;
+}
+
+.detail-link {
+    margin: 0px;
+}
+
