@@ -5,6 +5,8 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 from apps.user.models import MyUser
 
+from datetime import date
+
 
 class ArticleType(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
@@ -31,6 +33,8 @@ class Articles(models.Model):
     )
 
     create_time = models.DateTimeField(auto_now_add=True)
+
+    createtime = models.DateField(verbose_name='发布时间', help_text='发布时间', default=date.today)
 
     img_header = models.ImageField(upload_to='./upload_img/news-header/',
                                    null=True,

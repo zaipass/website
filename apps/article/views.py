@@ -12,7 +12,7 @@ class ArticleView(viewsets.ModelViewSet):
     """
     For NEWS API
     """
-    queryset = Articles.objects.filter(is_published=True).order_by('-create_time')
+    queryset = Articles.objects.filter(is_published=True).order_by('-createtime')
     serializer_class = ArticleSerializer
     filter_backends = (DjangoFilterBackend,)
     filter_class = ArticleTypeFilter

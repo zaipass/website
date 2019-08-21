@@ -10,7 +10,7 @@ class ArticlesAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': (
             'img_header', 'title',
-            'sub_title', 'summarize', 'content'
+            'sub_title', 'summarize', 'createtime', 'content'
         )}),
         (_('重要信息'), {'fields': ('types', 'is_published', 'is_top')}),
     )

@@ -239,7 +239,7 @@ class ArticleTypesView(ArticleView):
         try:
             object_list = self.get_queryset().filter(types__typename=news_type.get('handian_news'))
 
-            news_list = object_list.order_by('-is_top', '-create_time')
+            news_list = object_list.order_by('-is_top', '-createtime')
 
             # news_list = self.get_queryset().filter(types__typename=news_type.get('handian_news'))[:4]
 
