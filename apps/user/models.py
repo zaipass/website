@@ -13,6 +13,8 @@ from django.core.validators import RegexValidator
 from django.core.mail import send_mail
 from django.utils import timezone
 
+from datetime import date
+
 from ckeditor.fields import RichTextField
 
 
@@ -113,6 +115,9 @@ class Position(models.Model):
     create_time = models.DateTimeField(auto_now_add=True,
                                        verbose_name='创建时间',
                                        help_text='创建时间')
+    createtime = models.DateField(default=date.today,
+                                  verbose_name='创建时间',
+                                  help_text='创建时间')
     position_title = models.CharField(max_length=100,
                                       verbose_name='职位头衔',
                                       help_text='职位头衔')
