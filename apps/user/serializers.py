@@ -24,4 +24,4 @@ class PositionIndexSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Position
-        fields = ('id', 'position_title', 'work_experience', 'create_time')
+        fields = ('id', 'position_title', 'work_experience', 'createtime', 'create_time')

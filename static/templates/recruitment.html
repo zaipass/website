@@ -54,7 +54,8 @@
                     <div class="col-md-6">
                         <div class="news-list recruitment-list">
                             <a href="{% url 'user:recruitment-position' po.id %}">
-                                <span class="time"><strong>25</strong><br>2019-12</span>
+
+                                <span class="time"><strong>{{ po.createtime|slice:"8:" }}</strong><br>{{ po.createtime|slice:":7" }}</span>
                                 <h2>{{ po.position_title }}</h2>
                                 <p>{{ po.work_experience }}</p>
                             </a>
@@ -76,7 +77,7 @@
                     <div class="col-md-6">
                         <div class="news-list recruitment-list">
                             <a href="{% url 'user:recruitment-position' po.id %}">
-                                <span class="time"><strong>25</strong><br>2019-12</span>
+                                <span class="time"><strong>{{ po.createtime|slice:"8:" }}</strong><br>{{ po.createtime|slice:":7" }}</span>
                                 <h2>{{ po.position_title }}</h2>
                                 <p>{{ po.work_experience }}</p>
                             </a>
