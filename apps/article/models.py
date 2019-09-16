@@ -5,8 +5,6 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 from apps.user.models import MyUser
 
-from datetime import date
-
 
 class ArticleType(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)

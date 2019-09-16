@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from rest_framework.exceptions import NotFound
 from rest_framework.decorators import action
 
+from django.shortcuts import render
+
 from apps.user.models import Position
 from apps.user.decorators import decorator_template
 from apps.user.pagination import NewsListPagination, GoodsListPagination
@@ -14,6 +16,7 @@ from apps.user.utils import (
 )
 
 from apps.product.views import ProductView
+from apps.product.models import Product
 from apps.product.serializers import ProductSearchSerializer
 
 from apps.article.views import ArticleView
@@ -170,10 +173,10 @@ class ProductNameView(ProductView):
 
     def get_queryset(self):
         if self.action == 'class_product':
-            return super().queryset.filter(types__typename=self.zh_class)
+            return Product.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_class)
         elif self.action == 'new_product':
-            return super().queryset.filter(types__typename=self.zh_new)
-        return super().queryset
+            return Product.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_new)
+        return Product.objects.order_by('product_num', '-create_time')
 
     def get_product(self, req, *args, **kwargs):
         current_page = req.query_params.get('page', 1)
@@ -210,6 +213,15 @@ class ProductNameView(ProductView):
 
     @decorator_template(pagename='product-detail.html')
     def list(self, request, *args, **kwargs):
+        pk = kwargs.get('pk')
+        try:
+            pro = Product.objects.get(pk=pk)   # noqa
+        except Product.DoesNotExist:
+            return {
+                'error': True,
+                'render_url': '/product/'
+            }
+
         response = super().retrieve(request, *args, **kwargs)
         serializer = ProductSearchSerializer(self.get_queryset(), many=True)
 

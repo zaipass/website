@@ -1,6 +1,8 @@
 # ProductType Product
 from django.db import models
 
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 class ProductType(models.Model):
     create_time = models.DateTimeField(auto_now_add=True)
@@ -47,9 +49,8 @@ class Product(models.Model):
     save_way = models.CharField(max_length=255,
                                 verbose_name='贮藏',
                                 help_text='贮藏')
-    info_detail = models.TextField(max_length=500,
-                                   verbose_name='药品详细描述',
-                                   help_text='药品详细描述')
+    info_detail = RichTextUploadingField(config_name='wo')
+
     time_long = models.CharField(max_length=100,
                                  verbose_name='有效期',
                                  help_text='有效期')

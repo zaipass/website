@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 
 from apps.user.utils import get_all_navbar
+from functools import wraps
 
 
 def decorator_template(pagename=None):
 
     def decorator_view(func):
+        wraps(func)
 
         def inner_func(self, request, *args, **kwargs):
             try:
