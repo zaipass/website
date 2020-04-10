@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
-{% load i18n %}
 
 <head>
   <!-- ========== Meta Tags ========== -->
@@ -158,7 +157,7 @@
 
                 {% for nav in navbar %}
                     <li {% if request.path == nav.nav_url %} class="active" {% endif %}>
-                        <a href="/en/{{ nav.nav_url }}">
+                        <a href="{{ nav.nav_url }}">
                         <em></em>{{ nav.zh_name }}</a>
                     </li>
                 {% endfor %}
