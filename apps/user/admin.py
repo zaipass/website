@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from apps.user.models import MyUser, NavBar, Position
+from apps.user.models import MyUser, NavBar, Position, EnNavBar
 
 from django.utils.translation import gettext_lazy as _
 
@@ -34,6 +34,11 @@ class MyUserAdmin(UserAdmin):
 @admin.register(NavBar)
 class NavBar(admin.ModelAdmin):
     list_display = ('zh_name', 'nav_num', 'nav_url', 'is_published')
+
+
+@admin.register(EnNavBar)
+class EnNavBar(admin.ModelAdmin):
+    list_display = ('en_name', 'nav_num', 'nav_url', 'is_published')
 
 
 admin.site.site_header = '汉典制药官网后台管理'

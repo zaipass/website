@@ -2,6 +2,10 @@ from django.urls import path
 from apps.user.views import (
     IndexView, ProductNameView, ArticleTypesView, PositionView, SearchProductView
 )
+from apps.user.views_en import (
+    EnIndexView, EnProductNameView, EnArticleTypesView,
+    EnPositionView,
+)
 
 urlpatterns = [
     # path('', IndexView.as_view({'get': 'list'}), name='index'),
@@ -36,3 +40,32 @@ urlpatterns = [
     path('search/', SearchProductView.as_view({'get': 'list'}), name='search'),
 
 ]
+
+urlpatterns.extend([
+    path('en/', EnIndexView.as_view({'get': 'list'}), name='en-index'),
+
+    path('en/center/', EnIndexView.as_view({'get': 'center'}), name='en-center'),
+    path('en/center_famous/', EnIndexView.as_view({'get': 'center_famous'}), name='en-center-famous'),
+    path('en/center_hospital/', EnIndexView.as_view({'get': 'center_hospital'}), name='en-center-hospital'),
+    path('en/center_class/', EnIndexView.as_view({'get': 'center_class'}), name='en-center-class'),
+
+    path('en/product/', EnProductNameView.as_view({'get': 'product'}), name='en-product'),
+    path('en/product/class_product/', EnProductNameView.as_view({'get': 'class_product'}), name='en-product-class'),
+    path('en/product/new_product/', EnProductNameView.as_view({'get': 'new_product'}), name='en-product-new'),
+    path('en/product/<int:pk>/', EnProductNameView.as_view({'get': 'list'}), name='en-product-all'),
+
+    path('en/news/', EnArticleTypesView.as_view({'get': 'list'}), name='en-news'),
+    path('en/news/<int:pk>/', EnArticleTypesView.as_view({'get': 'news'}), name='en-news-detail'),
+    path('en/news_list/', EnArticleTypesView.as_view({'get': 'news_list'}), name='en-news-list'),
+
+    path('en/recruitment/', EnPositionView.as_view({'get': 'recruitment'}), name='en-recruitment'),
+    path('en/position/<int:pk>/', EnPositionView.as_view({'get': 'list'}), name='en-recruitment-position'),
+
+    path('en/contact/', EnIndexView.as_view({'get': 'contact'}), name='en-contact'),
+
+    path('en/index_hd/', EnIndexView.as_view({'get': 'index_hd'}), name='en-index-hd'),
+    path('en/index_cy/', EnIndexView.as_view({'get': 'index_cy'}), name='en-index-cy'),
+    path('en/index_zy/', EnIndexView.as_view({'get': 'index_zy'}), name='en-index-zy'),
+
+
+])

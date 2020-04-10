@@ -1,14 +1,25 @@
-from apps.user.models import NavBar
+from apps.user.models import NavBar, EnNavBar
 
 from apps.user.constants import position_type
 
 
 def get_all_navbar(context=dict()):
-
+    """
+    中文: 获取对应的nav导航
+    """
     nav_list = NavBar.objects.filter(is_published=True).order_by('nav_num')
 
     context.update({'navbar': nav_list})
 
+    return context
+
+
+def en_get_all_navbar(context=dict()):
+    """
+    英文: 获取对应的nav导航
+    """
+    nav_list = EnNavBar.objects.filter(is_published=True).order_by('nav_num')
+    context.update({'navbar': nav_list})
     return context
 
 

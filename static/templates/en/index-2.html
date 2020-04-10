@@ -1,0 +1,53 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans '汉典制药' %}-{% trans '走进汉典' %}{% endblock title %}
+
+{% block breadcrumb %}
+    <!-- Start Breadcrumb     ============================================= -->
+    <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/4.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/title-i.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="/en/"><i class="fa fa-home"></i>About</a></li>
+                        <li class="active">{% trans '武夷山凤凰茶业' %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+    <!-- Start About    ============================================= -->
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="news-text">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h3 class="text-center">{% trans '武夷山凤凰茶业' %}</h3>
+                        <p class="bb1" style="text-indent: 0;"></p>
+                        <p>{% trans '武夷山凤凰茶业有限公司隶属于北京汉典（集团）科技有限公司，座落于世界文化与自然遗产双产地、国家重点自然保护区、中国茶文化艺术之乡的福建武夷山，是首批获准使用“中华人民共和国原产地标识”企业，首批获得中国追溯认证的武夷岩茶企业。拥有原产地核心产区茶园。公司主要从事茶叶的生产与销售，主要经营中国传统高端茗茶——密云龙（武夷岩茶）、凤凰等系列产品。由公司首席茶叶专家、国家级非物质文化遗产“武夷岩茶大红袍制作技艺传承人”叶启桐大师、茶叶专家陈荣冰教授、制茶专家许千里等人士共同打造。' %}</p>
+                        <p class="text-center" style="text-indent: 0; margin: 15px 0;"><img src="{% static 'assets/img/about-b.jpg' %}" alt="" /></p>
+                        <p>{% trans '武夷山凤凰茶业有限公司以汉典集团20年历久弥坚的中医药品牌积淀为依托，致力于大健康产业。以先进的科学技术和专业严谨的制药标准为基础，以国际化专业团队和国内外领先的企业管理水平、经营机制为保障。' %}</p>
+                        <p>{% trans '凤凰茶业以其行业第一家标准化产业链，生产品质高度稳定的产品，致力于打造中国高端岩茶第一品牌。' %}</p>
+                        <p class="bb1"></p>
+                        <p class="text-center"><a href="/en/">{% trans '返回' %}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+{% endblock content %}

@@ -18,6 +18,37 @@ from datetime import date
 from ckeditor.fields import RichTextField
 
 
+class EnNavBar(models.Model):
+    """ english nav model """
+    create_time = models.DateTimeField(auto_now_add=True)
+
+    is_published = models.BooleanField(verbose_name='是否发布',
+                                       default=False,
+                                       help_text='是否发布')
+    en_name = models.CharField(verbose_name='导航名称',
+                               help_text='导航名称',
+                               max_length=20)
+    nav_url = models.CharField(verbose_name='导航路径',
+                               help_text='导航路径',
+                               null=True,
+                               max_length=100,
+                               validators=[RegexValidator(
+                                   regex=r'^/en/(?:[0-9a-zA-Z]*[-]*[0-9a-zA-Z]*/?)$',
+                                   message='例如: "/en/" 或者 "/en/index/", "/en/index-1/", 字符应为字母/数字/-',
+                                   code='url-error'),
+                               ])
+    nav_num = models.IntegerField(verbose_name='排列顺序',
+                                  help_text='排列顺序',
+                                  unique=True)
+
+    def __str__(self):
+        return self.en_name
+
+    class Meta:
+        verbose_name = _('英文版导航')
+        verbose_name_plural = verbose_name
+
+
 class MyUser(AbstractBaseUser, PermissionsMixin):
     """
     Custom user model

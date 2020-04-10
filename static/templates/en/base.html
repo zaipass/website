@@ -72,7 +72,7 @@
           <div class="top-search">
             <div class="input-group">
               <form action="{% url 'user:search' %}" method="GET">
-                <input type="text" name="search" class="form-control" placeholder="搜 索" />
+                <input type="text" name="search" class="form-control" placeholder="{% trans '搜 索' %}" />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </div>
@@ -93,7 +93,7 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i
               class="fa fa-bars"></i></button>
-          <a class="navbar-brand" href="{% url 'user:index' %}"><img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo" /></a>
+          <a class="navbar-brand" href="{% url 'user:index' %}"><img src="{% static 'assets/en-img/logo.png' %}" class="logo" alt="Logo" /></a>
         </div>
         <!-- End Header Navigation -->
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -105,52 +105,52 @@
             {% if productnav %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '服务与产品' %} class="active" {% endif %}>
-                    <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
-                </li>
+                    <li {% if "Product" in nav.en_name %} class="active" {% endif %}>
+                        <a href="{{ nav.nav_url }}">
+                        <em></em>{{ nav.en_name }}</a>
+                    </li>
                 {% endfor %}
 
             {% elif newsOnenav %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '新闻动态' %} class="active" {% endif %}>
+                <li {% if nav.en_name == "News" %} class="active" {% endif %}>
                     <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
+                    <em></em>{{ nav.en_name }}</a>
                 </li>
                 {% endfor %}
 
             {% elif centernav %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '医学中心' %} class="active" {% endif %}>
+                <li {% if "Medical" in nav.en_name %} class="active" {% endif %}>
                     <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
+                    <em></em>{{ nav.en_name }}</a>
                 </li>
                 {% endfor %}
 
             {% elif newsListnav %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '新闻动态' %} class="active" {% endif %}>
+                <li {% if "News" in nav.en_name %} class="active" {% endif %}>
                     <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
+                    <em></em>{{ nav.en_name }}</a>
                 </li>
                 {% endfor %}
             {% elif recruitmentnav %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '招贤纳士' %} class="active" {% endif %}>
+                <li {% if "Join" in nav.en_name %} class="active" {% endif %}>
                     <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
+                    <em></em>{{ nav.en_name }}</a>
                 </li>
                 {% endfor %}
             {% elif abouthd %}
 
                 {% for nav in navbar %}
-                <li {% if nav.zh_name == '走进汉典' %} class="active" {% endif %}>
+                <li {% if "About" in nav.en_name %} class="active" {% endif %}>
                     <a href="{{ nav.nav_url }}">
-                    <em></em>{{ nav.zh_name }}</a>
+                    <em></em>{{ nav.en_name }}</a>
                 </li>
                 {% endfor %}
 
@@ -158,8 +158,8 @@
 
                 {% for nav in navbar %}
                     <li {% if request.path == nav.nav_url %} class="active" {% endif %}>
-                        <a href="/en/{{ nav.nav_url }}">
-                        <em></em>{{ nav.zh_name }}</a>
+                        <a href="{{ nav.nav_url }}">
+                        <em></em>{{ nav.en_name }}</a>
                     </li>
                 {% endfor %}
 
@@ -182,9 +182,9 @@
           <!-- Single Item -->
           <div class="col-md-6 item">
             <div class="f-item">
-              <p><a href="index.html"><img src="{% static 'assets/img/logo.png' %}" class="logo" alt="Logo" /></a></p>
-              <p>北京汉典制药有限公司为北京市高新技术企业，以产、学、研为基础，致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发明专利，国家中药保护品种，在中医药、生物工程、天然植物药等领域提供经典的健康产品，为健康事业做出积极贡献。公司系国家GMP认证和国际ISO 9001认证企业。北京汉典制药勤求古训、博采众方，探索整理中医药学和现代科学技术的应用，研究中医药科学原理，实现“自然、健康”，使中医药更好服务于社会。</p>
-              <p><i class="fa fa-map-marker"></i>北京市朝阳区朝外大街乙12号1号楼昆泰国际大厦22层</p>
+              <p><a href="index.html"><img src="{% static 'assets/en-img/logo.png' %}" class="logo" alt="Logo" /></a></p>
+              <p>{% trans '北京汉典制药有限公司为北京市高新技术企业，以产、学、研为基础，致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发明专利，国家中药保护品种，在中医药、生物工程、天然植物药等领域提供经典的健康产品，为健康事业做出积极贡献。公司系国家GMP认证和国际ISO 9001认证企业。北京汉典制药勤求古训、博采众方，探索整理中医药学和现代科学技术的应用，研究中医药科学原理，实现“自然、健康”，使中医药更好服务于社会。' %}</p>
+              <p><i class="fa fa-map-marker"></i>{% trans '北京市朝阳区朝外大街乙12号1号楼昆泰国际大厦22层' %}</p>
               <p><i class="fa fa-envelope"></i>hantien@handian.com</p>
               <p><i class="fa fa-phone"></i>010-56903399</p>
             </div>
@@ -193,12 +193,12 @@
           <!-- Single Item -->
           <div class="col-md-3 item">
             <div class="f-item link">
-              <h4>网站导航</h4>
+              <h4>{% trans '网站导航' %}</h4>
               <ul>
-                <li><a href="#"><i class="fa fa-arrow-right"></i>联系我们</a></li>
-                <li><a href="#"><i class="fa fa-arrow-right"></i>法律声明</a></li>
-                <li><a href="#"><i class="fa fa-arrow-right"></i>隐私保护</a></li>
-                <li><a href="#"><i class="fa fa-arrow-right"></i>网站地图</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right"></i>{% trans '联系我们' %}</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right"></i>{% trans '法律声明' %}</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right"></i>{% trans '隐私保护' %}</a></li>
+                <li><a href="#"><i class="fa fa-arrow-right"></i>{% trans '网站地图' %}</a></li>
               </ul>
             </div>
           </div>
@@ -206,7 +206,7 @@
           <!-- Single Item -->
           <div class="col-md-3 item">
             <div class="f-item twitter-widget">
-              <h4>关注我们</h4>
+              <h4>{% trans '关注我们' %}</h4>
               <div class="twitter-item">
                 <div class="twitter-content">
                   <p>
@@ -216,8 +216,8 @@
               </div>
               <div class="twitter-item">
                 <div class="twitter-content">
-                  <p><a href="#"><strong>汉典集团</strong></a></p>
-                  <p><a href="#"><strong>汉典中医医院</strong></a></p>
+                  <p><a href="#"><strong>{% trans '汉典集团' %}</strong></a></p>
+                  <p><a href="#"><strong>{% trans '汉典中医医院' %}</strong></a></p>
                 </div>
               </div>
             </div>
@@ -231,8 +231,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p>Copyright &copy; 2019 北京汉典制药有限公司</p>
-            <p>京ICP备09033805号-1&nbsp;&nbsp;(京)-非经营性-2015-0182</p>
+            <p>Copyright &copy; 2019 {% trans '北京汉典制药有限公司' %}</p>
+            <p>{% trans '京ICP备09033805号-1&nbsp;&nbsp;(京)-非经营性-2015-0182' %}</p>
           </div>
           <div class="col-md-6 text-right link">
             <ul>

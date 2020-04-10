@@ -1,0 +1,1007 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 10:43+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: apps/article/admin.py:15
+msgid "重要信息"
+msgstr ""
+
+#: apps/product/apps.py:7
+msgid "商品"
+msgstr ""
+
+#: apps/user/admin.py:18
+msgid "Personal info"
+msgstr ""
+
+#: apps/user/admin.py:19
+msgid "Permissions"
+msgstr ""
+
+#: apps/user/admin.py:22
+msgid "Important dates"
+msgstr ""
+
+#: apps/user/models.py:48
+msgid "英文版导航"
+msgstr ""
+
+#: apps/user/models.py:59
+msgid "username"
+msgstr ""
+
+#: apps/user/models.py:62
+msgid "要求: 少于100位字符. 仅仅支持\"数字, 字母 和 ./+/-/_\""
+msgstr ""
+
+#: apps/user/models.py:65
+msgid "该用户名已存在."
+msgstr ""
+
+#: apps/user/models.py:68
+msgid "邮箱地址"
+msgstr ""
+
+#: apps/user/models.py:78
+msgid "staff status"
+msgstr ""
+
+#: apps/user/models.py:80
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: apps/user/models.py:83
+msgid "active"
+msgstr ""
+
+#: apps/user/models.py:86
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: apps/user/models.py:90
+msgid "date joined"
+msgstr ""
+
+#: apps/user/models.py:99 apps/user/models.py:100
+msgid "user"
+msgstr ""
+
+#: apps/user/models.py:141
+msgid "导航"
+msgstr ""
+
+#: apps/user/models.py:196
+msgid "职位招聘"
+msgstr ""
+
+#: apps/user/validators.py:14
+msgid "请输入有效用户名称,包含'字母','数字',或者特殊字符'./+/-/_'"
+msgstr ""
+
+#: apps/user/validators.py:31 apps/user/validators.py:41
+#, python-format
+msgid "密码长度不可超过 %(max_length)d 字符."
+msgid_plural "密码长度不可超过 %(max_length)d 字符."
+msgstr[0] ""
+msgstr[1] ""
+
+#: apps/user/views_en.py:114
+msgid "咨询"
+msgstr "Consultation"
+
+#: apps/user/views_en.py:124 static/templates/en/center.html:22
+#: static/templates/en/center.html:39
+msgid "医学"
+msgstr "Medical"
+
+#: apps/user/views_en.py:134
+msgid "课堂"
+msgstr "Class"
+
+#: apps/user/views_en.py:159
+msgid "专利"
+msgstr "Patents"
+
+#: static/templates/en/base.html:75
+msgid "搜 索"
+msgstr "Search"
+
+#: static/templates/en/base.html:186
+msgid ""
+"北京汉典制药有限公司为北京市高新技术企业，以产、学、研为基础，致力于预防和治"
+"疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发明专利，国家中"
+"药保护品种，在中医药、生物工程、天然植物药等领域提供经典的健康产品，为健康事"
+"业做出积极贡献。公司系国家GMP认证和国际ISO 9001认证企业。北京汉典制药勤求古"
+"训、博采众方，探索整理中医药学和现代科学技术的应用，研究中医药科学原理，实"
+"现“自然、健康”，使中医药更好服务于社会。"
+msgstr ""
+"As a high & new technological enterprise in Beijing, Beijing Handian "
+"Pharmaceutical Co., Ltd. is based on production, academia and research and "
+"is committed to the scientific research and product development for the "
+"prevention and treatment of diseases. The company has delivered a series of "
+"high-tech results and obtained a number of national patents for its "
+"inventions and a variety of protected TCM products. Its classic health "
+"products cover fields of TCM, bioengineering, natural herb medicine, etc., "
+"which makes a positive contribution to the health cause. Being a national "
+"GMP certified and international ISO 9001 certified company, Handian "
+"Pharmaceutical is diligent in seeking for ancient precepts, broadminded in "
+"gathering numerous formulas and vigorous in the combined application of TCM "
+"and modern sciences and technologies. Through an investigation into the "
+"fundamentals of traditional Chinese medical studies, the company brings "
+"“natural health” to customers and ensures that traditional Chinese medicine "
+"could serve the society better. "
+
+#: static/templates/en/base.html:187 static/templates/en/contact.html:40
+msgid "北京市朝阳区朝外大街乙12号1号楼昆泰国际大厦22层"
+msgstr ""
+"22nd Floor, Kuntai International Mansion, Building 1, No. 12 (B) Chaowai "
+"Dajie, Chaoyang District, Beijing"
+
+#: static/templates/en/base.html:196
+msgid "网站导航"
+msgstr "Website navigation"
+
+#: static/templates/en/base.html:198 static/templates/en/contact.html:5
+#: static/templates/en/contact.html:22
+msgid "联系我们"
+msgstr "Contact us"
+
+#: static/templates/en/base.html:199
+msgid "法律声明"
+msgstr "Legal disclaimers"
+
+#: static/templates/en/base.html:200
+msgid "隐私保护"
+msgstr "Privacy statement"
+
+#: static/templates/en/base.html:201
+msgid "网站地图"
+msgstr "Site map"
+
+#: static/templates/en/base.html:209
+msgid "关注我们"
+msgstr "Follow us"
+
+#: static/templates/en/base.html:219
+msgid "汉典集团"
+msgstr "Handian Group"
+
+#: static/templates/en/base.html:220 static/templates/en/index-3.html:22
+#: static/templates/en/index-3.html:39 static/templates/en/index.html:94
+msgid "汉典中医医院"
+msgstr "Handian Traditional Chinese Medicine Hospital"
+
+#: static/templates/en/base.html:234 static/templates/en/contact.html:39
+#: static/templates/en/index.html:70
+msgid "北京汉典制药有限公司"
+msgstr "Beijing Handian Pharmaceutical Co., Ltd."
+
+#: static/templates/en/base.html:235
+msgid "京ICP备09033805号-1&nbsp;&nbsp;(京)-非经营性-2015-0182"
+msgstr ""
+"This website of Beijing Handian Pharmaceutical Co., Ltd. has obtained a "
+"Beijing ICP license, i.e. No. 09033805 and a (Beijing) non-operational "
+"internet archive code of 2015-0182."
+
+#: static/templates/en/center-2.html:11 static/templates/en/center.html:5
+#: static/templates/en/center.html:50
+msgid "医学中心"
+msgstr "Medical Center"
+
+#: static/templates/en/center-2.html:12
+msgid ""
+"医学中心是汉典制药为医疗工作者、中医药行业工作者及爱好者定制的医学专业平台，"
+"您可以享受全方位、一站式医学专业服务："
+msgstr ""
+"As a customized professional medical platform for medical workers, TCM "
+"industry workers and enthusiasts, the medical center can provide you with a "
+"comprehensive, one-stop professional medical services:"
+
+#: static/templates/en/center-2.html:13
+msgid "文献下载：提供文献下载平台，方便医疗工作者自由检索"
+msgstr ""
+"Document downloading: a document downloading platform is available to "
+"medical workers to use at ease."
+
+#: static/templates/en/center-2.html:14
+msgid "文献查询：汉典集团已上市药品文献汇总"
+msgstr ""
+"Document searching: a collection of the documents about the drugs released "
+"by Handian Group."
+
+#: static/templates/en/center-2.html:15
+msgid "汉典产品：汉典集团已上市药品的相关信息查询"
+msgstr ""
+"Handian’s products: the information about the drugs released by Handian "
+"Group."
+
+#: static/templates/en/center-2.html:16
+msgid "汉典大学：权威专家中医药相关视频课程"
+msgstr ""
+"Handian College: video recordings of TCM lectures given by authoritarian "
+"experts."
+
+#: static/templates/en/center-2.html:17
+msgid "智能问诊：汇聚常见症状及相关数据，根据病症相关词，筛选和推送个性化信息"
+msgstr ""
+"Smart diagnosis: common symptoms and relevant statistics are collected so "
+"that personal recommendations could be made to inquirers according to the "
+"key words of the symptoms they provide."
+
+#: static/templates/en/center-2.html:18
+msgid "资讯报道：医学发展前沿信息、中医药政策动态，医学学术会议的报道"
+msgstr ""
+"Information and coverage: latest information about the advancement in "
+"medical science, developments in policies related to traditional Chinese "
+"medicine and reports about academic conventions of medical science."
+
+#: static/templates/en/center-2.html:19
+msgid "中医药典：方便查询，保证用药安全"
+msgstr ""
+"Catalog of TCM drugs: an easy-to-search system that ensures safety of drug "
+"consumption."
+
+#: static/templates/en/center-3.html:11
+msgid "云课堂"
+msgstr "Cloud classroom"
+
+#: static/templates/en/center-3.html:13
+msgid ""
+"“汉典空中课堂”网罗各个科室的权威专家，打造了一支医疗经验丰富的专家名师团队，"
+"提供专家名师的优质课程教学视频，以及名师公开课的课堂实录。“汉典空中课堂”可以"
+"通过web页面登录和手机APP登录，支持IOS系统和安卓系统，为广大医生朋友提供一个优"
+"质而便捷的教学视频在线平台。"
+msgstr ""
+"“Handian Medical Class on the Air” gathers a team of experts from all fields "
+"of medical science to offer quality online video classes as well as video "
+"recordings of public classes. As a quality and convenient online learning "
+"platform for medical professionals, “Handian Medical Class on the Air” is "
+"now available on webpage and mobile apps (of both iOS and Android devices)."
+
+#: static/templates/en/center.html:5 static/templates/en/contact.html:5
+#: static/templates/en/index-1.html:5 static/templates/en/index-1.html:22
+#: static/templates/en/index-1.html:39 static/templates/en/index-2.html:5
+#: static/templates/en/index-3.html:5 static/templates/en/news.html:5
+#: static/templates/en/product.html:5
+#: static/templates/en/recruitment-position.html:5
+#: static/templates/en/recruitment.html:5
+msgid "汉典制药"
+msgstr "Handian Pharmaceutical"
+
+#: static/templates/en/center.html:21 static/templates/en/contact.html:21
+#: static/templates/en/news.html:21 static/templates/en/product-detail.html:22
+#: static/templates/en/product.html:25
+#: static/templates/en/recruitment-position.html:21
+#: static/templates/en/recruitment.html:21
+msgid "首页"
+msgstr "About Handian"
+
+#: static/templates/en/center.html:39
+msgid "中心"
+msgstr "Center"
+
+#: static/templates/en/center.html:42 static/templates/en/center.html:63
+msgid "国家专利技术"
+msgstr "Technologies with national patents"
+
+#: static/templates/en/center.html:46
+msgid "名医咨询"
+msgstr "Consultation with renowned doctors"
+
+#: static/templates/en/center.html:54
+msgid "空中课堂"
+msgstr "Medical class on the air"
+
+#: static/templates/en/center.html:64 static/templates/en/index.html:39
+msgid "大学之道，在明明德，在亲民，在止于至善。"
+msgstr ""
+"The way of Great Learning lies in the enlightenment of brilliant virtues, "
+"the remolding of people and the pursuit of ultimate goodness."
+
+#: static/templates/en/center.html:65 static/templates/en/index.html:40
+msgid ""
+"我们弘扬真善美，服务于健康事业。汉典产业的健康事业，来自我们的不断创造。汉典"
+"产业以“科学发展、创造经典”为理念，以“真善美”服务社会，促进医药科技发展，创造"
+"值得信赖的品牌企业，实现我们“服务于健康事业”的理想和价值观。"
+msgstr ""
+"We promote truth, goodness and beauty and serve the cause of health. The "
+"health cause of Handian Industry comes from our continuous creation. With "
+"the concept of “scientific development, creating classics”, Handian Industry "
+"serves the society with “truth, goodness and beauty”, promotes the "
+"development of medical science and technology, creates a trustworthy brand "
+"of the enterprise and fulfills our ideals and values of “serving the cause "
+"of health”."
+
+#: static/templates/en/contact.html:40
+msgid "地址："
+msgstr "Address:"
+
+#: static/templates/en/contact.html:41
+msgid "电话："
+msgstr "Tel:"
+
+#: static/templates/en/contact.html:42
+msgid "招商："
+msgstr "Business cooperation contact:"
+
+#: static/templates/en/contact.html:43
+msgid "传真："
+msgstr "Fax:"
+
+#: static/templates/en/contact.html:44
+msgid "厂址："
+msgstr "Factory address:"
+
+#: static/templates/en/contact.html:44
+msgid "北京市密云区经济开发区水源路232号"
+msgstr "232 Shui Yuan Road, Economic Development Zone, Miyun District, Beijing"
+
+#: static/templates/en/contact.html:45
+msgid "邮件："
+msgstr "Email:"
+
+#: static/templates/en/index-1.html:5 static/templates/en/index-2.html:5
+#: static/templates/en/index-3.html:5
+#, fuzzy
+#| msgid "汉典制药-走进汉典"
+msgid "走进汉典"
+msgstr "About Handian Group"
+
+#: static/templates/en/index-1.html:41
+msgid ""
+"北京汉典制药以“大医精诚”理念传承经典国药, 秉承传统中医药理论，结合现代科学技"
+"术，以“生命健康”为宗旨，不断追求卓越，创制“国药经典”产品，努力塑造恒久品牌。"
+"目前，已在国内上市了多种创新药品，经典中药和现代中药，涉及脾胃疾病、心脑血管"
+"疾病、肝脏疾病、情志疾病、骨科疾病、肿瘤和风湿疾病等相关领域。"
+msgstr ""
+"Beijing Handian Pharmaceutical inherits the essence of TCM with the ideal of "
+"“the greatest doctor’s expertise and sincerity (大医精诚)”, adhering to the "
+"theories of TCM, combining them with modern science and technology, taking "
+"“ensuring a healthy life” as the company’s ultimate goal, constantly "
+"pursuing excellence in the creation of “classic Chinese medicine (国药经典)” "
+"products and striving to build a long-lasting brand. Handian Pharmaceutical "
+"has so far marketed nationwide a variety of innovative drugs, including both "
+"classic Chinese medicine and modern Chinese medicine, and covering fields "
+"such as spleen and stomach diseases, cardiovascular diseases, liver "
+"diseases, emotional and mental diseases, orthopedic diseases, tumors, "
+"rheumatic diseases and so on."
+
+#: static/templates/en/index-1.html:43
+msgid ""
+"汉典人秉承名医古籍《脾胃论》、《太平惠民和剂局方》、《伤寒杂病论》和《丹溪心"
+"法》中经典名方，悉遵古方精选道地药材，应用现代先进生产工艺，制得汉典经典产品"
+"吉灵参（补中益气颗粒）、美纳舒（参苓白术颗粒）、和解（小柴胡颗粒）和六郁（越"
+"鞠胶囊）。公司还遵循中医药理论，密切结合中医临床疗效，运用现代科学的研究手段"
+"开展中药和复方药理作用研究，已自主研发了国家重大创新药、国内第一个双效抗乙肝"
+"病毒天然植物药紫叶丹胶囊，国家二类心脑血管及神经系统疾病的双跨性治疗新药达洛"
+"特银杏酮酯滴丸，荣获2002 年度国家科技进步二等奖、被评为中国中药保护品种、国家"
+"级新药的保尔根痛平颗粒，以及获得国家发明专利、汇集中医苗药之精华的黑骨藤追风"
+"活络颗粒等。"
+msgstr ""
+"The personnel in Handian are assimilating the classic formulas mentioned in "
+"TCM classics like Pi Wei Lun (<脾胃论>, Treatise on the Spleen and Stomach), "
+"Taiping Huimin Heji Ju Fang (<太平惠民和剂局方>, Formulary of the Taiping "
+"Welfare Dispensary Bureau), Shanghan Zabing Lun (<伤寒杂病论>, Treatise on "
+"Cold Pathogenic and Miscellaneous Diseases) and Danxi Xinfa (<丹溪心法>, Dan-"
+"Xi’s Experiential Therapy). They comply with the ancient formulas in the "
+"selection of authentic crude medical materials and, in combination with "
+"advanced manufacture techniques in modern times, manage to produce classic "
+"medical products, including “Ji Ling Shen (吉灵参 (补中益气颗粒))”, “Mei Na "
+"Shu (美纳舒 (参苓白术颗粒))”, “He Jie (和解(小柴胡颗粒))” and “Liu Yu (六郁"
+"(越鞠胶囊))”. The company also follows the theories of traditional Chinese "
+"medical studies, closely integrates the clinical efficacy of TCM, uses "
+"modern scientific research methods to carry out researches on the "
+"pharmacological effects of TCM and compound medicine, and has independently "
+"developed a range of medical products, including a major national innovation "
+"drug, the first dual-effect anti-hepatitis B virus natural herb in China, i."
+"e. “Zi Ye Dan Jiao Nang (紫叶丹胶囊)”, a new drug for dual-transmission "
+"treatment of national Class II cardiovascular and neurological diseases, i."
+"e. Daluote - Yinxing Tongzhi Diwan (达洛特银杏酮酯滴丸), a national new drug "
+"that won a second prize of National Science and Technology Progress Award in "
+"2002 and is listed as a protected variety of traditional Chinese medicine, i."
+"e. Baoer – Gentongping Keli (保尔根痛平颗粒), and Heiguteng Zhuifeng Huoluo "
+"Keli (黑骨藤追风活络颗粒), a drug that has gained a National Patent for "
+"Inventions and combined the essence of TCM of the Miao people, etc. "
+
+#: static/templates/en/index-1.html:44
+msgid ""
+"北京汉典制药勤求古训、博采众方，探索中医药和现代科学技术的应用，研究中医药科"
+"学原理，坚持质量第一，提供高质、安全、天然的健康产品、品牌产品，实现“自然·健"
+"康”，坚持“科学发展，创造经典”的经营思想，实现我们服务于健康事业的理想和价值"
+"观，使中医药更好服务于社会，成为社会信赖的企业。"
+msgstr ""
+"Handian Pharmaceutical is diligent in seeking for ancient precepts, "
+"broadminded in gathering numerous formulas and vigorous in the combined "
+"application of TCM and modern sciences and technologies. Handian "
+"investigates the fundamentals of traditional Chinese medical studies, sticks "
+"to the “quality first” principle, provides quality, safe and natural health "
+"products under the brand-name Handian, brings “natural health” to customers, "
+"adheres to the business motto of “scientific development, creating "
+"classics”, fulfills our ideals and values of serving the cause of health, "
+"ensures that traditional Chinese medicine could serve the society better, "
+"and thus becomes a socially trustworthy enterprise. "
+
+#: static/templates/en/index-1.html:46 static/templates/en/index-2.html:46
+#: static/templates/en/index-3.html:48
+msgid "返回"
+msgstr "Back"
+
+#: static/templates/en/index-2.html:22 static/templates/en/index-2.html:39
+msgid "武夷山凤凰茶业"
+msgstr "Wuyishan Fenghuang Tea"
+
+#: static/templates/en/index-2.html:41
+msgid ""
+"武夷山凤凰茶业有限公司隶属于北京汉典（集团）科技有限公司，座落于世界文化与自"
+"然遗产双产地、国家重点自然保护区、中国茶文化艺术之乡的福建武夷山，是首批获准"
+"使用“中华人民共和国原产地标识”企业，首批获得中国追溯认证的武夷岩茶企业。拥有"
+"原产地核心产区茶园。公司主要从事茶叶的生产与销售，主要经营中国传统高端茗茶——"
+"密云龙（武夷岩茶）、凤凰等系列产品。由公司首席茶叶专家、国家级非物质文化遗"
+"产“武夷岩茶大红袍制作技艺传承人”叶启桐大师、茶叶专家陈荣冰教授、制茶专家许千"
+"里等人士共同打造。"
+msgstr ""
+"Wuyishan Fenghuang Tea Co., Ltd. (short as ‘Fenghuang Tea’) is an affiliate "
+"of Beijing Handian (Group) Technology Co., Ltd. Located at Wuyishan, Fujian "
+"Province, which is both a World Cultural Site and a World Heritage Site, a "
+"National Key Nature Reserve, and the home to Chinese tea culture and art, "
+"Fenghuang Tea is one of the first tea enterprises authorized to use the "
+"“Certificate of Origin, P. R. China” and one of the first Wuyi rock tea "
+"enterprises to be certified by China Traceability Testification Platform. "
+"Boasting a tea plantation in the core of the origin of Wuyi rock tea, the "
+"company is mainly engaged in the production and sales of tea, mainly high-"
+"end traditional Chinese tea—Mi Yun Long (密云龙, a brand of Wuyi rock tea), "
+"Feng Huang (凤凰) and a series of other products. These products are jointly "
+"created by Master Ye Qitong (叶启桐), the company’s chief tea expert and the "
+"inheritor of techniques for making Da Hong Pao (大红袍, Big Red Robe, a "
+"variety of Wuyi rock tea), which is a national intangible cultural heritage, "
+"tea expert Professor Chen Rongbing (陈荣冰), tea-making expert Xu Qianli (许"
+"千里) and other professionals."
+
+#: static/templates/en/index-2.html:43
+msgid ""
+"武夷山凤凰茶业有限公司以汉典集团20年历久弥坚的中医药品牌积淀为依托，致力于大"
+"健康产业。以先进的科学技术和专业严谨的制药标准为基础，以国际化专业团队和国内"
+"外领先的企业管理水平、经营机制为保障。"
+msgstr ""
+"Built on the time-honored brand that Handian Group has established over the "
+"past 20 years in terms of traditional Chinese medicine, Fenghuang Tea is "
+"committed to the broad health industry. On the basis of advanced science and "
+"technology as well as professional and rigorous pharmaceutical standards, "
+"the quality of the company’s products is guaranteed by its professional team "
+"that is internationalized and its corporate management system and operation "
+"mechanism that is advanced at home and abroad."
+
+#: static/templates/en/index-2.html:44
+msgid ""
+"凤凰茶业以其行业第一家标准化产业链，生产品质高度稳定的产品，致力于打造中国高"
+"端岩茶第一品牌。"
+msgstr ""
+"With a standardized industrial chain, which is the first of its kind in the "
+"industry, and products whose quality is outstanding and consistent, "
+"Fenghuang Tea is striving to become the topmost brand in the production of "
+"high-end Chinese rock tea."
+
+#: static/templates/en/index-3.html:41
+msgid ""
+"汉典中医医院是汉典集团投资医疗领域的第一家医疗机构，秉承东汉伟大医学家张仲景"
+"的医学理论体系，恪守“辨证施治”的中医传统诊疗原则，以“大医精诚”为服务理念，“勤"
+"求古训、博采众方”，心怀对患者严谨务实的责任感和努力回报社会的追求，致力于打造"
+"一家集中医诊疗、中医养生、慢病管理、名医传承与经方验方研发及应用为一体的高品"
+"质中医医院。"
+msgstr ""
+"Handian Traditional Chinese Medicine Hospital is the first medical "
+"institution that Handian Group has invested on. The hospital adheres to the "
+"medical theory system crafted by Zhang Zhongjing (张仲景), a great doctor "
+"during the Eastern Han Dynasty, abides by the diagnosis and treatment "
+"principles of “辩证施治 (diagnosis and treatment based on an overall "
+"analysis of the illness and the patient’s condition)” in TCM, sticks to the "
+"service ideal of “the greatest doctor’s expertise and sincerity (大医精诚)”, "
+"“diligently seeks for ancient precepts and extensively gathers numerous "
+"formulas”, assumes the responsibility of rigorous and pragmatic treatment, "
+"perseveres in the pursuit of giving back to the society, and strives to "
+"develop into a high-end TCM hospital that actualizes the integration of TCM "
+"diagnosis and treatment, TCM health maintenance, chronic disease management, "
+"remarkable doctor introduction and inheritance, and the research, "
+"development and application of classical and empirical formulas."
+
+#: static/templates/en/index-3.html:43
+msgid ""
+"汉典中医医院下设汉典医学中心，医学中心包含三大门诊：疑难杂病门诊、中医综合门"
+"诊、中医调养门诊。疑难杂病门诊专门从事疑难杂病的研究及诊疗，拥有从国医大师、"
+"名医传承工作室专家、全国名老中医到青年中医医师的丰富人才梯队数十人，涉及9大学"
+"科，以满足不同患者的就医需求。"
+msgstr ""
+"The Handian Medical Center is established under the Handian Traditional "
+"Chinese Medicine Hospital, which consists of three major outpatient clinics, "
+"namely, the Complex Disease Clinic, the General Traditional Chinese Medicine "
+"Clinic and the Traditional Chinese Medicine Rehabilitation Clinic. The "
+"Complex Disease Clinic specializes in the research, diagnosis and treatment "
+"of complex and miscellaneous diseases, with dozens of medical talents from "
+"ranging from national medical masters, experts from “Famous Doctor "
+"Inheritance Studio (名医传承工作室)”, national renowned old TCM "
+"practitioners, to young Chinese medicine practitioners. These talents are "
+"specializing in 9 major medical branches and thus can fulfill patients’ "
+"diverse needs."
+
+#: static/templates/en/index-3.html:44
+msgid ""
+"中医综合门诊设有内科、妇科、儿科等科室，满足百姓日常看病就医需要，亲民的诊"
+"费，便可享受优质、高效、便捷的中医药服务。"
+msgstr ""
+"The General Traditional Chinese Medicine Clinic has internal medicine, "
+"gynecology, pediatrics and other departments to meet the common medical "
+"needs of the general public, who can enjoy quality, efficient and convenient "
+"TCM services at a fully affordable price."
+
+#: static/templates/en/index-3.html:45
+msgid ""
+"中医调养门诊充分发挥中医药在养生保健、疾病预防、慢病康复等方面的优势作用，积"
+"极响应国家“健康中国战略”，助力国家实现2020年“让人人基本享有中医药服务”的目"
+"标。"
+msgstr ""
+"Traditional Chinese Medicine Rehabilitation Clinic gives full play to the "
+"advantages of TCM in health care and maintenance, disease prevention and "
+"chronic disease rehabilitation, and actively responds to the national "
+"“Healthy China Strategy (健康中国战略)”, assisting the country to achieve "
+"the goal of “ensuring every citizen the access to basic TCM services” by "
+"2020."
+
+#: static/templates/en/index-3.html:46
+msgid ""
+"从建院伊始，汉典中医医院不断提升品牌在百姓中的信任感及美誉度，弘扬国医精髓，"
+"持续向社会提供优质的医疗服务，践行汉典集团服务于健康事业的理想。"
+msgstr ""
+"Ever since its establishment, the Handian Traditional Chinese Medicine "
+"Hospital has been continuously enhancing the trustworthiness and reputation "
+"of the brand among the people, promoting the essence of TCM, providing "
+"quality medical services to the society and fulfilling Handian Group’s "
+"commitment in serving the health cause."
+
+#: static/templates/en/index.html:5
+msgid "汉典制药-走进汉典"
+msgstr "Handian Pharmaceutical - About Handian Group"
+
+#: static/templates/en/index.html:29
+msgid "集团"
+msgstr "Introduction to"
+
+#: static/templates/en/index.html:29
+msgid "介绍"
+msgstr "Handian Group"
+
+#: static/templates/en/index.html:41
+msgid "汉典产业位于北京市朝阳区，为产、学、研高科技企业。"
+msgstr ""
+"Located in Chaoyang District, Beijing, Handian Industry is a high-tech "
+"enterprise that integrates production, academia and research."
+
+#: static/templates/en/index.html:42
+msgid ""
+"汉典产业坚持以科技为先导，立足科学前沿，坚持创新发展，致力于预防和治疗疾病的"
+"科学研究、产品开发，在西药、生物、中医、中药、茶产业等领域不断提供高技术产"
+"品。公司获得多项科技发明专利，为健康事业做出积极贡献。"
+msgstr ""
+"We are constant in regarding science and technology as the guiding star, "
+"setting foot in the frontline of scientific development, persevering in "
+"innovative development, committing ourselves to the scientific research and "
+"product development for the prevention and treatment of diseases, and "
+"providing high-tech products in the fields of western medicine, biology, "
+"Chinese medical science, traditional Chinese medicine (short as TCM), tea "
+"industry, etc. The company has obtained a number of patents for scientific "
+"and technological inventions and has made a positive contribution to the "
+"health cause."
+
+#: static/templates/en/index.html:43
+msgid ""
+"汉典产业以“大医精诚”为服务理念，坚持质量第一,提供高质、安全、天然的健康产品、"
+"优质的医疗服务，成为社会信赖的企业。"
+msgstr ""
+"Handian Industry adheres to service ideal of “the greatest doctor’s "
+"expertise and sincerity (大医精诚)”, sticks to the “quality first” "
+"principle, provides quality, safe and natural health products and premium "
+"medical services, and thus becomes a socially trustworthy enterprise. "
+
+#: static/templates/en/index.html:44
+msgid ""
+"汉典产业下属北京汉典制药有限公司、武夷山凤凰茶业有限公司、汉典中医医院有限公"
+"司等企业。"
+msgstr ""
+"Handian Industry has a number of affiliates, including Beijing Handian "
+"Pharmaceutical Co., Ltd., Wuyishan Fenghuang Tea Co., Ltd., Handian "
+"Traditional Chinese Medicine Hospital Co., Ltd., etc."
+
+#: static/templates/en/index.html:57
+msgid "产业"
+msgstr "Industrial"
+
+#: static/templates/en/index.html:57
+msgid "布局"
+msgstr "Layout"
+
+#: static/templates/en/index.html:58
+msgid ""
+"汉典产业坚持以科技为先导，致力于预防和治疗疾病的科学研究、产品开发，不断取得"
+"高科技成果。公司获得多项科技发明和专利，为健康事业做出来积极贡献。"
+msgstr ""
+"Handian Industry is constant in regarding science and technology as the "
+"guiding star, committed to the scientific research and product development "
+"for the prevention and treatment of diseases, and continuous in providing "
+"high-tech products. The company has obtained a number of patents for "
+"scientific and technological inventions and has made a positive contribution "
+"to the health cause."
+
+#: static/templates/en/index.html:71
+msgid "北京汉典制药勤求古训、博采众方，探索哲理中医药学和现代科学技术的应用"
+msgstr ""
+"Beijing Handian Pharmaceutical Co., Ltd. (short as ‘Handian Pharmaceutical’) "
+"is diligent in seeking for ancient precepts, broadminded in gathering "
+"numerous formulas and vigorous in the combined application of philosophies "
+"in TCM and modern sciences and technologies. "
+
+#: static/templates/en/index.html:72 static/templates/en/index.html:84
+#: static/templates/en/index.html:96
+msgid "了解更多"
+msgstr "more"
+
+#: static/templates/en/index.html:82
+msgid "武夷山凤凰茶业有限公司"
+msgstr "Wuyishan Fenghuang Tea Co., Ltd."
+
+#: static/templates/en/index.html:83
+msgid ""
+"先后上市以密云龙、凤凰、天池青翠等品牌为代表的系列产品，深受广大消费者喜爱"
+msgstr ""
+"The company has released in succession a series of products, such as Min Yun "
+"Long (密云龙), Fenghuang (凤凰), Tianchi Qingcui (天池青翠) and other "
+"typical brands, which are widely coveted by consumers. "
+
+#: static/templates/en/index.html:95
+msgid "汉典中医提供经典中医药预防和治疗疾病，成为社会信赖的品牌中医"
+msgstr ""
+"Handian Traditional Chinese Medicine Hospital provides traditional Chinese "
+"medical prevention and treatment and aims to establish a trustworthy brand "
+"in the domain."
+
+#: static/templates/en/index.html:112
+msgid "公司"
+msgstr "Honorary Titles"
+
+#: static/templates/en/index.html:112
+msgid "荣誉"
+msgstr " of the Company"
+
+#: static/templates/en/news.html:5 static/templates/en/news.html:22
+msgid "新闻动态"
+msgstr "News and Coverage"
+
+#: static/templates/en/product-1.html:7
+msgid "中成药"
+msgstr "Classic"
+
+#: static/templates/en/product-1.html:11 static/templates/en/product-2.html:11
+#: static/templates/en/product.html:47 static/templates/en/product.html:57
+msgid "医疗服务平台"
+msgstr "Medical Service Platform"
+
+#: static/templates/en/product-1.html:12 static/templates/en/product-1.html:19
+#: static/templates/en/product-2.html:12 static/templates/en/product.html:48
+msgid "经典中成药"
+msgstr "Classic Chinese patent medicine"
+
+#: static/templates/en/product-1.html:13 static/templates/en/product-2.html:13
+#: static/templates/en/product-2.html:19 static/templates/en/product.html:49
+msgid "中成新品药"
+msgstr "New Chinese patent medicine"
+
+#: static/templates/en/product-2.html:7
+msgid "新品"
+msgstr "New"
+
+#: static/templates/en/product-detail.html:23
+#: static/templates/en/product.html:26 static/templates/en/product.html:44
+msgid "产品"
+msgstr "Products"
+
+#: static/templates/en/product-detail.html:41
+msgid "药品"
+msgstr "Medicine"
+
+#: static/templates/en/product-detail.html:41
+msgid "列表"
+msgstr "List"
+
+#: static/templates/en/product-detail.html:61
+msgid "药品名称"
+msgstr "Medicine name"
+
+#: static/templates/en/product-detail.html:62
+msgid "成　　份"
+msgstr "Ingredients"
+
+#: static/templates/en/product-detail.html:63
+msgid "性　　状"
+msgstr "Properties"
+
+#: static/templates/en/product-detail.html:64
+msgid "功能主治"
+msgstr "Major function"
+
+#: static/templates/en/product-detail.html:65
+msgid "规　　格"
+msgstr "Specification"
+
+#: static/templates/en/product-detail.html:66
+msgid "用法用量"
+msgstr "Usage & Dosage"
+
+#: static/templates/en/product-detail.html:67
+msgid "贮　　藏"
+msgstr "Storage"
+
+#: static/templates/en/product-detail.html:68
+msgid "有效期"
+msgstr "Validity period"
+
+#: static/templates/en/product.html:5
+msgid "服务与产品"
+msgstr "Services and Products"
+
+#: static/templates/en/product.html:28
+msgid "平台"
+msgstr "Platform"
+
+#: static/templates/en/product.html:44
+msgid "服务与"
+msgstr "Services and "
+
+#: static/templates/en/product.html:58
+msgid ""
+"致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果，拥有多项国家发"
+"明专利"
+msgstr ""
+"The medical service platform is committed to the scientific research and "
+"product development for the prevention and treatment of diseases. The "
+"company has delivered a series of high-tech results and obtained a number of "
+"national patents for its inventions"
+
+#: static/templates/en/product.html:64
+msgid "名医工作站"
+msgstr "Workshops for renowned doctors"
+
+#: static/templates/en/product.html:65
+msgid ""
+"自2018年以来，汉典医学中心蓬勃发展，先后有13个名医传承工作室落户汉典中医医"
+"院。通过汉典中医医院这个平台将数位国医大师的中医学术真正地传承下去，使其学术"
+"社会化，服务于广大患者。"
+msgstr ""
+"The medical center at Handian has been prospering since 2018, with 13 "
+"inheritance studios for famous doctors being successively introduced to "
+"Handian Traditional Chinese Medicine Hospital. It is expected that the "
+"academic achievements of these masters of TCM could be properly passed on "
+"through the platform constructed by Handian and that their academic findings "
+"would be socialized and utilized to serve the needs of many a patient. "
+
+#: static/templates/en/product.html:66
+msgid "首都国医名师房定亚传承工作室"
+msgstr ""
+"Inheritance Studio for Fang Dingya (房定亚), a renowned TCM expert in Beijing"
+
+#: static/templates/en/product.html:67
+msgid "首都国医名师冯世纶传承工作室"
+msgstr ""
+"Inheritance Studio for Feng Shilun(冯世纶), a renowned TCM expert in Beijing"
+
+#: static/templates/en/product.html:68
+msgid "张代钊名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Zhang Daizhao (张代钊)"
+
+#: static/templates/en/product.html:69
+msgid "刘弼臣名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Liu Bichen (刘弼臣)"
+
+#: static/templates/en/product.html:70
+msgid "董宜华名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Dong Yihua (董宜华)"
+
+#: static/templates/en/product.html:71
+msgid "王庆甫名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Wang Qingfu (王庆甫)"
+
+#: static/templates/en/product.html:72
+msgid "郭赛珊名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Guo Saishan (郭赛珊)"
+
+#: static/templates/en/product.html:73
+msgid "唐先平名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Tang Xianping (唐先平)"
+
+#: static/templates/en/product.html:74
+msgid "于天源名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Yu Tianyuan (于天源)"
+
+#: static/templates/en/product.html:75
+msgid "郝迎旭名医传承工作室"
+msgstr "Inheritance Studio for Famous Doctor, Hao Yingxu (郝迎旭)"
+
+#: static/templates/en/product.html:76
+msgid "国医大师张灿玾传承人王燕工作室"
+msgstr ""
+"Inheritance Studio for Wang Yan (王燕), inheritor of Zhang Canjia (张灿玾), "
+"a TCM master"
+
+#: static/templates/en/product.html:77
+msgid "国医大师方和谦传承人赵铁良工作室"
+msgstr ""
+"Inheritance Studio for Zhao Tieliang (赵铁良), inheritor of Fang Heqian (方和"
+"谦), a TCM master"
+
+#: static/templates/en/product.html:78
+msgid "国医大师方和谦传承人崔筱莉工作室"
+msgstr ""
+"Inheritance Studio for Cui Xiaoli (崔筱莉), inheritor of Fang Heqian (方和"
+"谦), a TCM master"
+
+#: static/templates/en/product.html:86
+msgid "中医综合诊疗"
+msgstr ""
+"Diagnosis and treatment at the General Traditional Chinese Medicine Clinic"
+
+#: static/templates/en/product.html:87
+msgid ""
+"中医综合门诊具有鲜明的中医特色，团队主要构成为汉典中医医院自有医生。中医综合"
+"门诊充分发挥汉典集团在中药及制药上的优势，以汉典道地药材、精制饮片、中成药为"
+"支撑，以“大医精诚”为服务宗旨，对常见的内科疾病、妇科疾病、儿科疾病均有很好的"
+"疗效。注重对老年人的慢病管理和对职场白领的亚健康状态的调理，致力于提高老年慢"
+"病人群的生活质量、提升职场人群的健康意识和水平。中医综合门诊同时也满足社会高"
+"端群体个性化就诊及医疗需求，为高端群体专设VIP服务通道，可享受到如家庭医生一般"
+"便捷、贴心的服务及优质的就医体验。"
+msgstr ""
+"The General Traditional Chinese Medicine Clinic has salient features of TCM "
+"and its team members are mainly Handian Traditional Chinese Medicine "
+"Hospital’s own doctors. The clinic gives full play to the advantages of "
+"Handian Group traditional Chinese medicine and pharmaceutical production. "
+"With the use of authentic medicine ingredients, refined herbal decoction "
+"flakes and Chinese patent medicine, and guided by service ideal of “the "
+"greatest doctor’s expertise and sincerity (大医精诚)”, the clinic has "
+"demonstrated satisfactory treatment results for common internal medicine "
+"diseases, gynecological diseases and pediatric diseases. Focusing on the "
+"management of chronic diseases of the elderly and the regulation of the sub-"
+"health status of office workers, the clinic is committed to improving the "
+"quality of life of the elderly with chronic diseases and raising the health "
+"awareness and physical wellness of workers. The clinic also meets the needs "
+"of the high-end groups for personalized consultation and medical care by "
+"setting up a VIP service channel, where they can enjoy convenient and "
+"attentive services and quality medical experience as they can obtain from a "
+"family doctor."
+
+#: static/templates/en/product.html:95
+msgid "疑难杂症诊疗"
+msgstr " Diagnosis and treatment at the Complex Disease Clinic"
+
+#: static/templates/en/product.html:96
+msgid ""
+"疑难杂病中心设有13个名医传承工作室，涉及十几个学科（风湿免疫科、中医肿瘤科、"
+"儿科、肾病科、老年病科、妇科、经方门诊、周围血管病科、皮肤病科、骨伤科、内分"
+"泌科等）。疑难杂病中心以精湛的医术、卓越的临床疗效与汉典优质的道地药材有机结"
+"合，不仅满足了普通百姓看病就医的需求、也解决了百姓“看病难“的问题，让更多疑难"
+"杂病患者能在最短时间内，得到快速、权威的诊疗。"
+msgstr ""
+"The Complex Disease Center has 13 inheritance studios for famous doctors, "
+"covering over a dozen branches of medical science (rheumatology and "
+"immunology, Chinese medical oncology, pediatrics, nephrology, geriatrics, "
+"gynecology, classical formula clinic, peripheral vascular disease, "
+"dermatology, orthopedics, endocrinology, etc.). With its extraordinary "
+"medical skills and outstanding clinical efficacy combined with the high "
+"quality authentic Chinese herbs, the center not only meets the needs of "
+"ordinary people for medical treatment, but also saves them a lot of hassle "
+"in terms of “seeing a doctor”, ensuring more patients with complex medical "
+"conditions to receive timely and authoritative diagnosis and treatment in "
+"the shortest possible time."
+
+#: static/templates/en/product.html:104
+msgid "中医调理"
+msgstr "Traditional Chinese medical rehabilitation"
+
+#: static/templates/en/product.html:105
+msgid ""
+"中医调理门诊以”治未病“为指导理论，充分发挥中医特色优势，通过中医传统非药物疗"
+"法(包括针、灸、正骨、推拿、熏蒸、火罐、贴敷、砭石等)、中医运动养生(太极、八段"
+"锦、五禽戏等)。可以为广大患者及百姓提供个性化疾病诊疗、健康保健、养生方案，并"
+"从运动锻炼、日常饮食、精神调养、科学用药等方面进行全方位知识科普及健康管理，"
+"主要针对慢性疲劳综合症、睡眠障碍、三高、颈肩腰腿痛、呼吸系统、妇科等现代都市"
+"人常见的亚健康状态及疾病进行调理与防治。汉典中医医院还设有健康产品研发中心，"
+"以“药食同源”为理论基础，为社会不同受众群体提供食疗养生等健康产品及服务。"
+msgstr ""
+"The Traditional Chinese Medicine Rehabilitation Clinic follows the guideline "
+"of “preventive treatment of disease”, gives full play to the features and "
+"advantages of TCM, and provides patients and citizens with personalized "
+"medical consultation, health care and wellness maintenance plans through the "
+"application of non-medication therapies (including needles (针), moxibustion "
+"(灸), manipulation maneuver (正骨), tui na (推拿, traditional Chinese "
+"medical massage), smoking and steaming (熏蒸), fire cupping (火罐), plaster "
+"and patch (贴敷), stone needle (砭石) and so on) and TCM health-maintenance "
+"practices (t’ai chi (太极), Baduanjin Qigong (八段锦, Eight Section Silk "
+"Brocade), Wu Qin Xi (五禽戏, Five Animal Play) and so on). Besides, the "
+"clinic also promotes all-round knowledge and health management in terms of "
+"physical exercise, daily diet, mental state regulation, proper medication "
+"intake, etc. It mainly targets at chronic fatigue syndrome, sleep disorders, "
+"“three high’s (abnormally high blood pressure (or hypertension), high blood "
+"lipid (or hyperlipidemia) and high blood sugar (or hyperglycemia))”, neck "
+"pain, shoulder pain, waist pain, leg pain, respiratory system illness, "
+"gynecological illness and other sub-health conditions and diseases common to "
+"modern urbanites, and provides them with relevant regulation and prevention "
+"measures. Furthermore, Handian Traditional Chinese Medicine Hospital has a "
+"health product research and development center which provides health "
+"products and services such as food therapy and health care for different "
+"social groups based on the medical idea that “medicine and food come from "
+"the same source (药食同源)”."
+
+#: static/templates/en/recruitment-position.html:5
+#: static/templates/en/recruitment-position.html:22
+#: static/templates/en/recruitment.html:5
+#: static/templates/en/recruitment.html:22
+msgid "招贤纳士"
+msgstr "Join Us"
+
+#: static/templates/en/recruitment-position.html:23
+msgid "职位详情"
+msgstr "Detail"
+
+#: static/templates/en/recruitment-position.html:41
+msgid "职位描述"
+msgstr "Job description: "
+
+#: static/templates/en/recruitment-position.html:43
+msgid "工作经验："
+msgstr "Working experience required: "
+
+#: static/templates/en/recruitment-position.html:44
+msgid "工作地点："
+msgstr "Location: "
+
+#: static/templates/en/recruitment-position.html:45
+msgid "薪金待遇："
+msgstr "Salary: "
+
+#: static/templates/en/recruitment-position.html:46
+msgid "工作性质："
+msgstr "Job type: "
+
+#: static/templates/en/recruitment-position.html:47
+msgid "招聘人数："
+msgstr "Number of employees needed: "
+
+#: static/templates/en/recruitment-position.html:49
+msgid "专业要求："
+msgstr "Major requirement: "
+
+#: static/templates/en/recruitment-position.html:50
+msgid "工作职责："
+msgstr "Job responsibilities: "
+
+#: static/templates/en/recruitment-position.html:51
+msgid "投递简历"
+msgstr "Resume submission: "
+
+#: static/templates/en/recruitment.html:68
+#: static/templates/en/recruitment.html:90
+msgid "暂无招聘信息"
+msgstr "No recruitment information at present"

@@ -591,24 +591,24 @@ footer .f-item i { font-size: 14px; margin-right: 10px; width: 16px; text-align:
     .about-area .img {  margin-top: 0 !important; margin-left: 0 !important;}
 
     .about-area .img2 {  margin-top: 0 !important; margin-left: 0 !important;}
-    
+
     .breadcrumb-area .banner-padding { padding: 20px 10px 0 !important; }
     .breadcrumb-area .banner-padding-b { padding: 30px 10px 40px !important;}
-    
+
     body, .banner-area, .banner-area div { height: 140px !important; }
-    
+
     .top-search { width: 100%; right: 0px; border-radius: 0; }
-    
+
     .input-group { width: 100%;}
 
     .famous-area .famous-content .item { margin: 0 !important;}
-    
+
     .news-content { padding: 20px !important; box-shadow: none !important; }
 
     .min-h-a { min-height: auto !important; }
 
     .pt-0 { padding: 0; text-align: left !important;}
-	
+
 	.news-text p { text-indent: 0; }
 
 }
