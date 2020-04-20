@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 
 from django.shortcuts import render
 
-from apps.user.models import Position
+from apps.user.models import EnPosition
 from apps.user.decorators import en_decorator_template
 from apps.user.pagination import NewsListPagination, GoodsListPagination
 from apps.user.serializers import (
@@ -15,21 +15,21 @@ from apps.user.utils import (
     get_next_news_not_position, get_pre_news_not_position, serializer_function
 )
 
-from apps.product.views import ProductView
-from apps.product.models import Product
-from apps.product.serializers import ProductSearchSerializer
+from apps.product.views import EnProductView
+from apps.product.models import EnProduct
+from apps.product.serializers import EnProductSearchSerializer
 
-from apps.article.views import ArticleView
-from apps.article.models import Certificate, Articles
+from apps.article.views import EnArticleView
+from apps.article.models import EnCertificate, EnArticles
 from apps.article.serializers import CertificateSerializer
 
-from apps.user.constants import product_type, news_type, position_type
+from apps.user.constants import en_product_type, en_news_type, en_position_type
 
 from django.utils.translation import gettext_lazy as _
 
 
 class EnPositionView(viewsets.ModelViewSet):
-    queryset = Position.objects.filter(is_published=True).order_by('-create_time')
+    queryset = EnPosition.objects.filter(is_published=True).order_by('-create_time')
 
     def get_serializer_class(self):
         if self.action == 'recruitment':
@@ -62,9 +62,8 @@ class EnPositionView(viewsets.ModelViewSet):
     @action(detail=False)
     @en_decorator_template(pagename='en/recruitment.html')
     def recruitment(self, request, *args, **kwargs):
-        position_articles = ArticleView.queryset.filter(types__typename=position_type)
+        position_articles = EnArticleView.queryset.filter(types__typename=en_position_type)
 
-        # serializer_info = ArticleView.serializer_class(position_articles, many=True)
         serializer_position_society = self.get_serializer(
             self.get_queryset().filter(types='society'),
             many=True
@@ -76,7 +75,7 @@ class EnPositionView(viewsets.ModelViewSet):
 
         return {
             'position_info': serializer_function(
-                ArticleView, position_articles, is_many=True
+                EnArticleView, position_articles, is_many=True
             ),
             'position_society': serializer_position_society.data,
             'position_student': serializer_position_student.data
@@ -137,7 +136,7 @@ class EnIndexView(viewsets.ModelViewSet):
 
     @en_decorator_template(pagename='en/index.html')
     def list(self, request, *args, **kwargs):
-        certificates = Certificate.objects.filter(cert_type='荣誉').order_by('-create_time')
+        certificates = EnCertificate.objects.filter(cert_type='Honorary').order_by('-create_time')
 
         certificate_serializer = CertificateSerializer(certificates, many=True)
 
@@ -150,7 +149,7 @@ class EnIndexView(viewsets.ModelViewSet):
     @action(detail=False)
     @en_decorator_template(pagename='en/center.html')
     def center(self, request, *args, **kwargs):
-        certificates = Certificate.objects.filter(cert_type='专利').order_by('-create_time')
+        certificates = EnCertificate.objects.filter(cert_type='Patent').order_by('-create_time')
 
         certificate_serializer = CertificateSerializer(certificates, many=True)
 
@@ -162,18 +161,18 @@ class EnIndexView(viewsets.ModelViewSet):
         return data
 
 
-class EnProductNameView(ProductView):
+class EnProductNameView(EnProductView):
     pagination_class = GoodsListPagination
 
-    zh_new = product_type.get('new_product')
-    zh_class = product_type.get('classical_product')
+    zh_new = en_product_type.get('new_product')
+    zh_class = en_product_type.get('classical_product')
 
     def get_queryset(self):
         if self.action == 'class_product':
-            return Product.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_class)
+            return EnProduct.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_class)
         elif self.action == 'new_product':
-            return Product.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_new)
-        return Product.objects.order_by('product_num', '-create_time')
+            return EnProduct.objects.order_by('product_num', '-create_time').filter(types__typename=self.zh_new)
+        return EnProduct.objects.order_by('product_num', '-create_time')
 
     def get_product(self, req, *args, **kwargs):
         current_page = req.query_params.get('page', 1)
@@ -212,15 +211,15 @@ class EnProductNameView(ProductView):
     def list(self, request, *args, **kwargs):
         pk = kwargs.get('pk')
         try:
-            pro = Product.objects.get(pk=pk)   # noqa
-        except Product.DoesNotExist:
+            pro = EnProduct.objects.get(pk=pk)   # noqa
+        except EnProduct.DoesNotExist:
             return {
                 'error': True,
                 'render_url': 'en/product/'
             }
 
         response = super().retrieve(request, *args, **kwargs)
-        serializer = ProductSearchSerializer(self.get_queryset(), many=True)
+        serializer = EnProductSearchSerializer(self.get_queryset(), many=True)
 
         data = {
             'product': response.data,
@@ -231,7 +230,7 @@ class EnProductNameView(ProductView):
         return data
 
 
-class EnArticleTypesView(ArticleView):
+class EnArticleTypesView(EnArticleView):
 
     pagination_class = NewsListPagination
 
@@ -246,7 +245,7 @@ class EnArticleTypesView(ArticleView):
     @en_decorator_template(pagename='en/news.html')
     def list(self, request, *args, **kwargs):
         try:
-            object_list = self.get_queryset().filter(types__typename=news_type.get('handian_news'))
+            object_list = self.get_queryset().filter(types__typename=en_news_type.get('handian_news'))
 
             news_list = object_list.order_by('-is_top', '-createtime')
 
@@ -257,7 +256,7 @@ class EnArticleTypesView(ArticleView):
 
         try:
             action_list = self.get_queryset().filter(
-                types__typename=news_type.get('same_action'))[:4]
+                types__typename=en_news_type.get('same_action'))[:4]
         except Exception:
             action_list = None
 
@@ -286,13 +285,13 @@ class EnArticleTypesView(ArticleView):
         try:
             news_obj = pk_obj.get_next_by_create_time()
             next_news = get_next_news_not_position(news_obj)
-        except Articles.DoesNotExist:
+        except EnArticles.DoesNotExist:
             next_news = None
 
         try:
             news_obj = pk_obj.get_previous_by_create_time()
             previous_news = get_pre_news_not_position(news_obj)
-        except Articles.DoesNotExist:
+        except EnArticles.DoesNotExist:
             previous_news = None
 
         data = {
@@ -311,9 +310,9 @@ class EnArticleTypesView(ArticleView):
 
         page = request.query_params.get('page')
 
-        if not types or types == position_type:
+        if not types or types == en_position_type:
             response_data['error'] = True
-            response_data['render_url'] = '/news/'
+            response_data['render_url'] = '/en/news/'
             return response_data
 
         try:

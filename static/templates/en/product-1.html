@@ -35,7 +35,7 @@
             <ul class="pagination">
                 {% if product_data.total_pages <= 3 %}
                 {% for page in product_data.range_pages %}
-                <li><a class="{{ page|active:current_page }}" href="{% url 'user:en-product-new' %}?page={{ page }}">{{ page }}</a>
+                <li><a class="{{ page|active:current_page }}" href="{% url 'user:en-product-class' %}?page={{ page }}">{{ page }}</a>
                 </li>
                 {% endfor %}
                 {% else %}
@@ -48,21 +48,21 @@
                 </li>
                 {% endif %}
                 {% if current_page|add:1 == product_data.total_pages|add:1 %}
-                <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:-2 }}">{{ current_page|add:-2 }}</a></li>
+                <li><a href="{% url 'user:en-product-class' %}?page={{ current_page|add:-2 }}">{{ current_page|add:-2 }}</a></li>
                 {% endif %}
 
                 {% if 0 < current_page|add:-1 %}
-                <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:-1 }}">{{ current_page|add:-1 }}</a></li>
+                <li><a href="{% url 'user:en-product-class' %}?page={{ current_page|add:-1 }}">{{ current_page|add:-1 }}</a></li>
                 {% endif %}
-                <li><a class="active-page" href="{% url 'user:en-product-new' %}?page={{ current_page }}">{{ current_page }}</a>
+                <li><a class="active-page" href="{% url 'user:en-product-class' %}?page={{ current_page }}">{{ current_page }}</a>
                 </li>
 
                 {% if product_data.total_pages >= current_page|add:1 %}
-                <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:1 }}">{{ current_page|add:1 }}</a></li>
+                <li><a href="{% url 'user:en-product-class' %}?page={{ current_page|add:1 }}">{{ current_page|add:1 }}</a></li>
                 {% endif %}
 
                 {% if current_page|add:-1 == 0 %}
-                <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:2 }}">{{ current_page|add:2 }}</a></li>
+                <li><a href="{% url 'user:en-product-class' %}?page={{ current_page|add:2 }}">{{ current_page|add:2 }}</a></li>
                 {% endif %}
 
                 {% if product_data.next %}

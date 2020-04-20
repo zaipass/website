@@ -1,5 +1,5 @@
 import django_filters
-from apps.product.models import Product
+from apps.product.models import Product, EnProduct
 
 
 class ProductNameFilter(django_filters.FilterSet):
@@ -11,6 +11,18 @@ class ProductNameFilter(django_filters.FilterSet):
 
     class Meta:
         model = Product
+        fields = ['name', 'types', ]
+
+
+class EnProductNameFilter(django_filters.FilterSet):
+    """
+    search a product of the name
+    """
+    name = django_filters.CharFilter(field_name='name', )
+    types = django_filters.CharFilter(field_name='types__typename',)
+
+    class Meta:
+        model = EnProduct
         fields = ['name', 'types', ]
 
 

@@ -64,7 +64,7 @@
                             </div>
                         {% endif %}
                     {% endfor %}
-                    <a href="{% url 'user:news-list' %}?types=汉典新闻" class="news-btn">查看更多</a>
+                    <a href="{% url 'user:en-news-list' %}?types=Handian News" class="news-btn">More</a>
                 </div>
                 {% endif %}
 
@@ -84,7 +84,7 @@
                         </a>
                     </div>
                     {% endfor %}
-                    <a href="{% url 'user:en-news-list' %}?types=行业动态" class="news-btn">More</a>
+                    <a href="{% url 'user:en-news-list' %}?types=Industry Dynamics" class="news-btn">More</a>
                 </div>
                 {% endif %}
             </div>

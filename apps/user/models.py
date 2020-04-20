@@ -18,6 +18,61 @@ from datetime import date
 from ckeditor.fields import RichTextField
 
 
+class EnPosition(models.Model):
+    create_time = models.DateTimeField(auto_now_add=True,
+                                       verbose_name='创建时间',
+                                       help_text='创建时间')
+    createtime = models.DateField(null=True,
+                                  blank=True,
+                                  verbose_name='发布时间',
+                                  help_text='发布时间')
+    position_title = models.CharField(max_length=100,
+                                      verbose_name='职位头衔',
+                                      help_text='职位头衔')
+    work_experience = models.CharField(max_length=100,
+                                       verbose_name='工作经验',
+                                       help_text='工作经验')
+    work_place = models.CharField(max_length=255,
+                                  verbose_name='工作地点',
+                                  help_text='工作地点')
+    work_salary = models.CharField(max_length=200,
+                                   verbose_name='薪资待遇',
+                                   help_text='薪资待遇')
+    work_time = models.CharField(max_length=200,
+                                 verbose_name='工作性质',
+                                 help_text='工作性质')
+    work_need_person = models.CharField(max_length=20,
+                                        verbose_name='招聘人数',
+                                        help_text='招聘人数')
+    work_need = RichTextField(verbose_name='专业要求',
+                              help_text='专业要求',
+                              config_name='position')
+    work_for = RichTextField(verbose_name='工作职责',
+                             help_text='工作职责',
+                             config_name='position')
+    contact = models.TextField(max_length=200,
+                               verbose_name='联系方式',
+                               help_text='联系方式')
+
+    POSITION_TYPE = (
+        ('society', 'Vacancies open for non-students'),
+        ('student', 'Campus recruitment')
+    )
+    types = models.CharField(max_length=10,
+                             choices=POSITION_TYPE,
+                             verbose_name='招聘类型',
+                             help_text='招聘类型')
+
+    is_published = models.BooleanField(default=True, verbose_name='职位是否发布', help_text='职位是否发布')
+
+    def __str__(self):
+        return self.position_title
+
+    class Meta:
+        verbose_name = _('[英文En]职位招聘')
+        verbose_name_plural = verbose_name
+
+
 class EnNavBar(models.Model):
     """ english nav model """
     create_time = models.DateTimeField(auto_now_add=True)

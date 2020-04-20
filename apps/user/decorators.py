@@ -43,7 +43,6 @@ def en_decorator_template(pagename=None):
                 if data is None:
                     data = dict()
             except Exception as e:
-                print(e)
                 data = dict()
 
             context = en_get_all_navbar(context=data)

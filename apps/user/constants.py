@@ -8,4 +8,16 @@ news_type = {
     'same_action': '行业动态'
 }
 
+en_product_type = {
+    'classical_product': 'Classic Chinese patent medicine',
+    'new_product': 'New Chinese patent medicine',
+}
+
+en_news_type = {
+    'handian_news': 'Handian News',
+    'same_action': 'Industry Dynamics'
+}
+
 position_type = '招聘信息'
+
+en_position_type = 'Recruitment Information'

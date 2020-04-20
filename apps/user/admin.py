@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from apps.user.models import MyUser, NavBar, Position, EnNavBar
+from apps.user.models import MyUser, NavBar, Position, EnNavBar, EnPosition
 
 from django.utils.translation import gettext_lazy as _
 
@@ -39,6 +39,12 @@ class NavBar(admin.ModelAdmin):
 @admin.register(EnNavBar)
 class EnNavBar(admin.ModelAdmin):
     list_display = ('en_name', 'nav_num', 'nav_url', 'is_published')
+
+
+@admin.register(EnPosition)
+class EnPositionAdmin(admin.ModelAdmin):
+    list_display = ('position_title', 'work_salary', 'work_time', 'work_need_person', 'create_time')
+    search_fields = ('position_title', 'work_salary', 'work_time', 'create_time')
 
 
 admin.site.site_header = '汉典制药官网后台管理'
