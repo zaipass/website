@@ -121,7 +121,7 @@ AUTH_USER_MODEL = 'user.MyUser'
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -140,7 +140,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
 )
 
-USE_L10N = True
+# USE_L10N = True
 
 USE_TZ = True
 

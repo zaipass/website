@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-10 10:43+0800\n"
+"POT-Creation-Date: 2020-04-20 16:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: apps/article/admin.py:15
+#: apps/article/admin.py:18 apps/article/admin.py:45
 msgid "重要信息"
 msgstr ""
 
@@ -38,57 +38,61 @@ msgstr ""
 msgid "Important dates"
 msgstr ""
 
-#: apps/user/models.py:48
+#: apps/user/models.py:72
+msgid "[英文En]职位招聘"
+msgstr ""
+
+#: apps/user/models.py:103
 msgid "英文版导航"
 msgstr ""
 
-#: apps/user/models.py:59
+#: apps/user/models.py:114
 msgid "username"
 msgstr ""
 
-#: apps/user/models.py:62
+#: apps/user/models.py:117
 msgid "要求: 少于100位字符. 仅仅支持\"数字, 字母 和 ./+/-/_\""
 msgstr ""
 
-#: apps/user/models.py:65
+#: apps/user/models.py:120
 msgid "该用户名已存在."
 msgstr ""
 
-#: apps/user/models.py:68
+#: apps/user/models.py:123
 msgid "邮箱地址"
 msgstr ""
 
-#: apps/user/models.py:78
+#: apps/user/models.py:133
 msgid "staff status"
 msgstr ""
 
-#: apps/user/models.py:80
+#: apps/user/models.py:135
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
 
-#: apps/user/models.py:83
+#: apps/user/models.py:138
 msgid "active"
 msgstr ""
 
-#: apps/user/models.py:86
+#: apps/user/models.py:141
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
 
-#: apps/user/models.py:90
+#: apps/user/models.py:145
 msgid "date joined"
 msgstr ""
 
-#: apps/user/models.py:99 apps/user/models.py:100
+#: apps/user/models.py:154 apps/user/models.py:155
 msgid "user"
 msgstr ""
 
-#: apps/user/models.py:141
+#: apps/user/models.py:196
 msgid "导航"
 msgstr ""
 
-#: apps/user/models.py:196
+#: apps/user/models.py:251
 msgid "职位招聘"
 msgstr ""
 
@@ -103,20 +107,20 @@ msgid_plural "密码长度不可超过 %(max_length)d 字符."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apps/user/views_en.py:114
+#: apps/user/views_en.py:113
 msgid "咨询"
 msgstr "Consultation"
 
-#: apps/user/views_en.py:124 static/templates/en/center.html:22
+#: apps/user/views_en.py:123 static/templates/en/center.html:22
 #: static/templates/en/center.html:39
 msgid "医学"
 msgstr "Medical"
 
-#: apps/user/views_en.py:134
+#: apps/user/views_en.py:133
 msgid "课堂"
 msgstr "Class"
 
-#: apps/user/views_en.py:159
+#: apps/user/views_en.py:158
 msgid "专利"
 msgstr "Patents"
 
@@ -287,7 +291,9 @@ msgid "汉典制药"
 msgstr "Handian Pharmaceutical"
 
 #: static/templates/en/center.html:21 static/templates/en/contact.html:21
-#: static/templates/en/news.html:21 static/templates/en/product-detail.html:22
+#: static/templates/en/news-detail.html:21
+#: static/templates/en/news-list.html:22 static/templates/en/news.html:21
+#: static/templates/en/product-detail.html:22
 #: static/templates/en/product.html:25
 #: static/templates/en/recruitment-position.html:21
 #: static/templates/en/recruitment.html:21
@@ -688,9 +694,15 @@ msgstr "Honorary Titles"
 msgid "荣誉"
 msgstr " of the Company"
 
-#: static/templates/en/news.html:5 static/templates/en/news.html:22
+#: static/templates/en/news-detail.html:22
+#: static/templates/en/news-list.html:23 static/templates/en/news.html:5
+#: static/templates/en/news.html:22
 msgid "新闻动态"
 msgstr "News and Coverage"
+
+#: static/templates/en/news-list.html:4
+msgid "新闻列表"
+msgstr ""
 
 #: static/templates/en/product-1.html:7
 msgid "中成药"
