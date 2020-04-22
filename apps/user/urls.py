@@ -4,7 +4,7 @@ from apps.user.views import (
 )
 from apps.user.views_en import (
     EnIndexView, EnProductNameView, EnArticleTypesView,
-    EnPositionView,
+    EnPositionView, EnSearchProductView
 )
 
 urlpatterns = [
@@ -67,5 +67,5 @@ urlpatterns.extend([
     path('en/index_cy/', EnIndexView.as_view({'get': 'index_cy'}), name='en-index-cy'),
     path('en/index_zy/', EnIndexView.as_view({'get': 'index_zy'}), name='en-index-zy'),
 
-
+    path('en/search/', EnSearchProductView.as_view({'get': 'list'}), name='en-search'),
 ])

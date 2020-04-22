@@ -28,6 +28,24 @@ from apps.user.constants import en_product_type, en_news_type, en_position_type
 from django.utils.translation import gettext_lazy as _
 
 
+class EnSearchProductView(EnProductView):
+    serializer_class = EnProductSearchSerializer
+    search_fields = [
+        'types__typename', 'name', 'composition', 'properties', 'main', 'info_detail',
+    ]
+
+    @en_decorator_template(pagename='en/search.html')
+    def list(self, request, *args, **kwargs):
+        data = {}
+        obj_products = self.filter_queryset(self.get_queryset())
+        # serializer = self.serializer_class(obj_products, many=True)
+        data.update({
+            'productnav': True,
+            'objects': serializer_function(self, obj_products, is_many=True),
+        })
+        return data
+
+
 class EnPositionView(viewsets.ModelViewSet):
     queryset = EnPosition.objects.filter(is_published=True).order_by('-create_time')
 

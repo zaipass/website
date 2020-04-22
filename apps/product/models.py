@@ -56,6 +56,26 @@ class EnProduct(models.Model):
     img = models.ImageField(upload_to='./upload_img/product/',
                             verbose_name='药品图片',
                             help_text='药品图片')
+    img_tw = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_th = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_fo = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_fi = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
     types = models.ForeignKey(EnProductType,
                               related_name='entps',
                               on_delete=models.CASCADE)
@@ -122,6 +142,26 @@ class Product(models.Model):
     img = models.ImageField(upload_to='./upload_img/product/',
                             verbose_name='药品图片',
                             help_text='药品图片')
+    img_tw = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_th = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_fo = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
+    img_fi = models.ImageField(upload_to='./upload_img/product/',
+                               verbose_name='药品图片',
+                               null=True,
+                               blank=True,
+                               help_text='药品图片')
     types = models.ForeignKey(ProductType,
                               related_name='tps',
                               on_delete=models.CASCADE)

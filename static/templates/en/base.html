@@ -39,7 +39,7 @@
   <div class="se-pre-con"></div>
   <!-- Preloader Ends -->
   <!-- Start Header Top     ============================================= -->
-<!--   <div class="top-bar-area inline inc-border">
+  <div class="top-bar-area inline inc-border">
     <div class="container">
       <div class="row">
         <div class="col-md-8 address-info text-left">
@@ -56,11 +56,11 @@
           </div>
         </div>
         <div class="col-md-4 bar-btn text-right">
-          <a href="#">中文版<i class="fa fa-sort-down"></i></a>
+          <a href="/">中文<i class="fa fa-sort-down"></i></a>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- End Header Top -->
   <!-- Header     ============================================= -->
   <header id="home">
@@ -71,7 +71,7 @@
         <div class="row">
           <div class="top-search">
             <div class="input-group">
-              <form action="{% url 'user:search' %}" method="GET">
+              <form action="{% url 'user:en-search' %}" method="GET">
                 <input type="text" name="search" class="form-control" placeholder="{% trans '搜 索' %}" />
                 <button type="submit"><i class="fa fa-search"></i></button>
               </form>
@@ -234,14 +234,7 @@
             <p>Copyright &copy; 2019 {% trans '北京汉典制药有限公司' %}</p>
             <p>{% trans '京ICP备09033805号-1&nbsp;&nbsp;(京)-非经营性-2015-0182' %}</p>
           </div>
-          <div class="col-md-4 text-right link">
-            <div style="
-            float: right; border-radius: 4px;
-            text-align: center; line-height: 17.5px; font-size: 14px;
-            height:25px; width:60px; padding: 5px;background-color: white;
-            "><a href="/" class="" style="color: black;">中文版</a></div>
-          </div>
-          <div class="col-md-2 text-right link">
+          <div class="col-md-6 text-right link">
             <ul>
               <li><a href="#"><i class="fa fa-qq"></i></a></li>
               <li><a href="#"><i class="fa fa-weixin"></i></a></li>
