@@ -5,7 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7' 
-                    args '--link=demo --network=website -p 8088:8000'
+                    args '--link=demo --network=website -p 8088:8000 -dit --name=web_demo'
                 }
             }
             // agent none
