@@ -1,24 +1,26 @@
 pipeline {
-    agent node 
-    node {
-        checkout scm
-        docker.image('mysql:v1').withRun('-e "MYSQL_ROOT_PASSWORD=mysql" -p 3387:3306') { c ->
-            docker.image('mysql:v1').inside("--link ${c.id}:db") {
-                /* Wait until mysql service is up */
-                sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
+    agent {
+        node {
+            checkout scm
+            docker.image('mysql:v1').withRun('-e "MYSQL_ROOT_PASSWORD=mysql" -p 3387:3306') { c ->
+                docker.image('mysql:v1').inside("--link ${c.id}:db") {
+                    /* Wait until mysql service is up */
+                    sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
+                }
+                docker.image('python:3.7').inside("--link ${c.id}:db") {
+                    /*
+                     * Run some tests which require MySQL, and assume that it is
+                     * available on the host name `db`
+                     */
+                    sh 'pip install -r requirements.txt' 
+                    sh 'python manage.py makemigrations'
+                    sh 'python manage.py migrate'
+                    sh 'python manage.py runserver'
+                }
             }
-            docker.image('python:3.7').inside("--link ${c.id}:db") {
-                /*
-                 * Run some tests which require MySQL, and assume that it is
-                 * available on the host name `db`
-                 */
-                sh 'pip install -r requirements.txt' 
-                sh 'python manage.py makemigrations'
-                sh 'python manage.py migrate'
-                sh 'python manage.py runserver'
-            }
-        }
-    }
+        } 
+    } 
+    
     // 
     // stages {
     //     stage('Test-MYSQL') { 
