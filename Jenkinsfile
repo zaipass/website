@@ -1,5 +1,5 @@
 pipeline {
-    agent none 
+    agent node 
     node {
         checkout scm
         docker.image('mysql:v1').withRun('-e "MYSQL_ROOT_PASSWORD=mysql" -p 3387:3306') { c ->
