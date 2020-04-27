@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'apk add libjpeg-dev zlib1g-dev'
+                sh 'apk add build-base jpeg-dev zlib-dev'
                 sh 'pip install -r requirements.txt' 
                 sh 'python manage.py makemigrations'
                 sh 'python manage.py migrate'
