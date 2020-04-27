@@ -299,6 +299,9 @@ h6 {
 .breadcrumb-area h1 {
     font-size: 36px;
 }  /* Topbar */	.top-bar-area {
+    /*display: none;*/
+}
+.address-info{
     display: none;
 }
 

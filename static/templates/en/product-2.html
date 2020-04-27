@@ -23,7 +23,7 @@
                 <div class="item-center item-service" >
                     <div class="info">
                         <h2 class="outter-img"><img src="{{ p.img }}" alt="" class="goods-img"></h2>
-                        <h4><a href="{% url 'user:en-product-all' p.id %}">{{ p.name }}</a></h4>
+                        <h4 style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><a href="{% url 'user:en-product-all' p.id %}">{{ p.name }}</a></h4>
                         <p class="product-detail-info">{{ p.main }}</p>
                         <p class="detail-link"><a href="{% url 'user:en-product-all' p.id %}" class="link-goods">Detail&nbsp;&raquo;</a></p>
                     </div>
