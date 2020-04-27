@@ -1,10 +1,23 @@
 pipeline {
     agent none 
     stages {
-        stage('Build') { 
+        stage('Test-MYSQL') { 
+            agent {
+                docker {
+                    image 'mysql:v1' 
+                    args '--name=db_web'
+                    args '-p 3387:3306'
+                }
+            }
+            steps {
+                sh 'mysql -V' 
+            }
+        }
+        stage('Test-Build') { 
             agent {
                 docker {
                     image 'python:3.7' 
+                    args '--link=db_web'
                 }
             }
             steps {
