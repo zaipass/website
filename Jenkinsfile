@@ -5,8 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7' 
-                    args '--link=demo'
-                    args '--network=website'
+                    args '--link=demo --network=website'
                 }
             }
             steps {
