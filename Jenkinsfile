@@ -2,7 +2,7 @@ pipeline {
     agent {
         node {
             checkout scm
-            docker.image('mysql:v1').withRun('-e "MYSQL_ROOT_PASSWORD=mysql" -p 3387:3306') { c ->
+            docker.image('mysql:v1').withRun('-e "MYSQL_ROOT_PASSWORD=mysql"') { c ->
                 docker.image('mysql:v1').inside("--link ${c.id}:db") {
                     /* Wait until mysql service is up */
                     sh 'while ! mysqladmin ping -hdb --silent; do sleep 1; done'
