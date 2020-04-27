@@ -8,7 +8,7 @@ pipeline {
                     args '--link=demo --network=website -p 8088:8000'
                 }
             }
-            agent none
+            // agent none
             steps {
                 sh 'pip install -r requirements.txt' 
                 sh 'python manage.py makemigrations'
