@@ -5,7 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'mysql:v1' 
-                    args '--name=db_web'
+                    args '-name db_web'
                     args '-p 3387:3306'
                 }
             }
@@ -17,7 +17,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7' 
-                    args '--link=db_web'
+                    args '-link db_web'
                 }
             }
             steps {
