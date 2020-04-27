@@ -6,6 +6,7 @@ pipeline {
                 docker {
                     image 'python:3.7' 
                     args '--link=demo'
+                    args '--network=website'
                 }
             }
             steps {
