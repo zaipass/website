@@ -1,12 +1,12 @@
 pipeline {
-    agent none
-    stages {
-        agent {
-            docker {
-                image 'python:3.7' 
-                args '--link=demo --network=website -p 8088:8000 -dit --name=web_demo'
-            }
+    // agent none
+    agent {
+        docker {
+            image 'python:3.7' 
+            args '--link=demo --network=website -p 8088:8000 -dit --name=web_demo'
         }
+    }
+    stages {
         stage('Test-Build') { 
             // agent none
             steps {
