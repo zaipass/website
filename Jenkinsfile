@@ -1,13 +1,13 @@
 pipeline {
     agent none
     stages {
-        stage('Test-Build') { 
-            agent {
-                docker {
-                    image 'python:3.7' 
-                    args '--link=demo --network=website -p 8088:8000 -dit --name=web_demo'
-                }
+        agent {
+            docker {
+                image 'python:3.7' 
+                args '--link=demo --network=website -p 8088:8000 -dit --name=web_demo'
             }
+        }
+        stage('Test-Build') { 
             // agent none
             steps {
                 sh 'pip install -r requirements.txt' 
