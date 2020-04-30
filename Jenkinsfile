@@ -17,7 +17,7 @@ pipeline {
             }
         }
         stage('Push-Build') { 
-            agent none
+            // agent none
             steps {
                 sh 'echo "this is ok."' 
             }
