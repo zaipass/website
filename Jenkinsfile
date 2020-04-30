@@ -1,6 +1,5 @@
 pipeline {
-    // agent none
-    agent 
+    agent none
     stages {
         stage('Test-Build') { 
             agent {
