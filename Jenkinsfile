@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Test-Build') { 
             agent {
@@ -17,7 +17,7 @@ pipeline {
             }
         }
         stage('Push-Build') { 
-            agent none
+            agent any
             steps {
                 sh 'echo "this is ok."' 
             }
