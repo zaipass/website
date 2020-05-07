@@ -9,8 +9,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'echo "what?"'
-                // sh 'pip install -r requirements.txt' 
+                // sh 'echo "what?"'
+                sh 'pip install -r requirements.txt' 
                 // sh 'python manage.py makemigrations'
                 // sh 'python manage.py migrate'
                 // sh 'uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini'
@@ -19,7 +19,7 @@ pipeline {
         stage('Push-Build') { 
             agent any
             steps {
-                sh 'echo "this is ok."' 
+                sh 'workon handian-0702' 
             }
         }
     }
