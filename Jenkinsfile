@@ -9,8 +9,8 @@ pipeline {
                 }
             }
             steps {
-                // sh 'echo "what?"'
-                sh 'pip install -r requirements.txt' 
+                sh 'echo "what?"'
+                // sh 'pip install -r requirements.txt' 
                 // sh 'python manage.py makemigrations'
                 // sh 'python manage.py migrate'
                 // sh 'uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini'
@@ -23,6 +23,7 @@ pipeline {
                     virtualenv website
                     source ./website/bin/activate
                     pip list
+                    cat requirements.txt
                 '''
             }
         }
