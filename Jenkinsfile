@@ -19,7 +19,9 @@ pipeline {
         stage('Push-Build') { 
             agent any
             steps {
-                sh 'workon handian-0702' 
+                sh 'virtualenv website' 
+                sh 'source ./website/bin/activate'
+                sh 'pip list'
             }
         }
     }
