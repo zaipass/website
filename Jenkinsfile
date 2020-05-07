@@ -19,9 +19,11 @@ pipeline {
         stage('Push-Build') { 
             agent any
             steps {
-                sh 'virtualenv website' 
-                sh 'source ./website/bin/activate'
-                sh 'pip3 list'
+                sh '''
+                    virtualenv website
+                    source ./website/bin/activate
+                    pip list
+                '''
             }
         }
     }
