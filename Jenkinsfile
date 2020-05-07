@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'virtualenv website' 
                 sh 'source ./website/bin/activate'
-                sh 'pip list'
+                sh 'pip3 list'
             }
         }
     }
