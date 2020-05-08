@@ -56,7 +56,7 @@
                             </div>
                         {% else %}
                             <div class="news-list">
-                                <a href="{% url 'user:news-detail' n.id %}">
+                                <a href="{% url 'user:en-news-detail' n.id %}">
                                     <span class="time"><strong>{{ n.createtime|slice:"8:" }}</strong><br>{{ n.createtime|slice:":7" }}</span>
                                     <h2>{{ n.title }}</h2>
                                     <p>{{ n.summarize }}</p>
