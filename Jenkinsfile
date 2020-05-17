@@ -26,7 +26,6 @@ pipeline {
                     virtualenv ${ENV_WEBSITE}/website
                     source ${ENV_WEBSITE}/website/bin/activate
                     pip install -r requirements.txt
-                    pwd
                     uwsgi --ini uwsgi.ini
                 '''
                 // rm -rf ${ENV_WEBSITE}/website
