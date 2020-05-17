@@ -29,9 +29,8 @@ pipeline {
                     pip list
                     pip install -r requirements.txt
                     pip list
-                    echo ${ENV_WEBSITE}
+                    uwsgi --ini uwsgi.ini
                 '''
-                // sh 'uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini'
                 // uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
             }
         }
