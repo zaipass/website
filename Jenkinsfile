@@ -1,5 +1,8 @@
 pipeline {
     agent none
+    environment {
+        ENV_WEBSITE = '/root/demo'
+    }
     stages {
         stage('Test-Build') { 
             agent {
@@ -25,8 +28,9 @@ pipeline {
                     pip list
                     pip install -r requirements.txt
                     pip list
-                    uwsgi --ini ./uwsgi.ini
+                    echo ${ENV_WEBSITE}
                 '''
+                // sh 'uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini'
                 // uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
             }
         }
