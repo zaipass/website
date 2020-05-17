@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        ENV_WEBSITE = '/root/demo'
+        ENV_DIR = '/root/env/'
     }
     stages {
         stage('Test-Build') { 
@@ -23,8 +23,8 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    virtualenv website
-                    source ./website/bin/activate
+                    virtualenv ${ENV_WEBSITE}/website
+                    source ${ENV_WEBSITE}/website/bin/activate
                     pip list
                     pip install -r requirements.txt
                     pip list
