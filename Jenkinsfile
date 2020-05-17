@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        ENV_DIR = '/root/env'
+        ENV_WEBSITE = '/root/env'
     }
     stages {
         stage('Test-Build') { 
