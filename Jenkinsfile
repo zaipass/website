@@ -23,13 +23,13 @@ pipeline {
             agent any
             steps {
                 sh '''
-                    rm -rf ${ENV_WEBSITE}/website
                     virtualenv ${ENV_WEBSITE}/website
                     source ${ENV_WEBSITE}/website/bin/activate
                     pip install -r requirements.txt
-                    pip list
                     uwsgi --ini uwsgi.ini
                 '''
+                // rm -rf ${ENV_WEBSITE}/website
+                // 
                 // uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
             }
         }
