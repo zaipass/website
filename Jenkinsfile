@@ -23,7 +23,7 @@ pipeline {
                     virtualenv website
                     source ./website/bin/activate
                     pip list
-                    cat requirements.txt
+                    uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
                 '''
             }
         }
