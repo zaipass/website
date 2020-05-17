@@ -23,6 +23,7 @@ pipeline {
             agent any
             steps {
                 sh '''
+                    rm -rf ${ENV_WEBSITE}/website
                     virtualenv ${ENV_WEBSITE}/website
                     pwd
                     source ${ENV_WEBSITE}/website/bin/activate
