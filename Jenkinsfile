@@ -23,7 +23,9 @@ pipeline {
                     virtualenv website
                     source ./website/bin/activate
                     pip list
-                    pwd
+                    pip install -r requirements.txt
+                    pip list
+                    uwsgi --ini ./uwsgi.ini
                 '''
                 // uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
             }
