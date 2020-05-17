@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}搜索结果{% endblock title %}
+
+{% block breadcrumb %}
+  <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/7.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+    <div class="container">
+      <div class="row banner-padding">
+        <div class="col-md-6">
+          <img src="{% static 'assets/img/title-c.png' %}" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6 text-right pt-0">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+            <li><a href="{% url 'user:product' %}">服务与产品</a></li>
+            <li class="active">查询结果</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <!-- Start About    ============================================= -->
+  <div class="famous-area default-padding top-40" style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="news-title">
+                    <h2>药品<span>列<a>表</a></span></h2>
+                </div>
+                {% if objects %}
+                    {% for n in objects %}
+                    <div class="news-list">
+                        <a href="{% url 'user:product-all' n.id %}">
+                            <span class="time"><strong>&nbsp;&nbsp;{{ forloop.counter }}</strong><br></span>
+                            <h2>{{ n.name }}</h2>
+                            <p>功能主治: {{ n.main }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="news-list">
+                        <a href="javascript:void(0)">
+                            <h2 style='color: #900;'>对不起, 当前并没有您所要查询的药品信息...</h2>
+                            <p></p>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End About -->
+
+{% endblock content %}

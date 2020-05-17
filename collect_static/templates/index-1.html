@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}汉典制药-走进汉典{% endblock title %}
+
+{% block breadcrumb %}
+  <!-- Start Breadcrumb     ============================================= -->
+    <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/4.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/title-i.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="/"><i class="fa fa-home"></i>走进汉典</a></li>
+                        <li class="active">汉典制药</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+    <!-- Start About    ============================================= -->
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="news-text">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h3 class="text-center">汉典制药</h3>
+                        <p class="bb1" style="text-indent: 0;"></p>
+                        <p>北京汉典制药以“大医精诚”理念传承经典国药, 秉承传统中医药理论，结合现代科学技术，以“生命健康”为宗旨，不断追求卓越，创制“国药经典”产品，努力塑造恒久品牌。目前，已在国内上市了多种创新药品，经典中药和现代中药，涉及脾胃疾病、心脑血管疾病、肝脏疾病、情志疾病、骨科疾病、肿瘤和风湿疾病等相关领域。</p>
+                        <p class="text-center" style="text-indent: 0; margin: 15px 0;"><img src="{% static 'assets/img/about-a.jpg' %}" alt="" /></p>
+                        <p>汉典人秉承名医古籍《脾胃论》、《太平惠民和剂局方》、《伤寒杂病论》和《丹溪心法》中经典名方，悉遵古方精选道地药材，应用现代先进生产工艺，制得汉典经典产品吉灵参（补中益气颗粒）、美纳舒（参苓白术颗粒）、和解（小柴胡颗粒）和六郁（越鞠胶囊）。公司还遵循中医药理论，密切结合中医临床疗效，运用现代科学的研究手段开展中药和复方药理作用研究，已自主研发了国家重大创新药、国内第一个双效抗乙肝病毒天然植物药紫叶丹胶囊，国家二类心脑血管及神经系统疾病的双跨性治疗新药达洛特银杏酮酯滴丸，荣获2002 年度国家科技进步二等奖、被评为中国中药保护品种、国家级新药的保尔根痛平颗粒，以及获得国家发明专利、汇集中医苗药之精华的黑骨藤追风活络颗粒等。</p>
+                        <p>北京汉典制药勤求古训、博采众方，探索中医药和现代科学技术的应用，研究中医药科学原理，坚持质量第一，提供高质、安全、天然的健康产品、品牌产品，实现“自然·健康”，坚持“科学发展，创造经典”的经营思想，实现我们服务于健康事业的理想和价值观，使中医药更好服务于社会，成为社会信赖的企业。</p>
+                        <p class="bb1"></p>
+                        <p class="text-center"><a href="/">返回</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+{% endblock content %}

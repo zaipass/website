@@ -1,0 +1,55 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans '汉典制药' %}-{% trans '走进汉典' %}{% endblock title %}
+
+{% block breadcrumb %}
+    <!-- Start Breadcrumb     ============================================= -->
+    <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/4.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/title-i.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="/en/"><i class="fa fa-home"></i>About</a></li>
+                        <li class="active">{% trans '汉典中医医院' %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+    <!-- Start About    ============================================= -->
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="news-text">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h3 class="text-center">{% trans '汉典中医医院' %}</h3>
+                        <p class="bb1" style="text-indent: 0;"></p>
+                        <p>{% trans '汉典中医医院是汉典集团投资医疗领域的第一家医疗机构，秉承东汉伟大医学家张仲景的医学理论体系，恪守“辨证施治”的中医传统诊疗原则，以“大医精诚”为服务理念，“勤求古训、博采众方”，心怀对患者严谨务实的责任感和努力回报社会的追求，致力于打造一家集中医诊疗、中医养生、慢病管理、名医传承与经方验方研发及应用为一体的高品质中医医院。' %}</p>
+                        <p class="text-center" style="text-indent: 0; margin: 15px 0;"><img src="{% static 'assets/img/about-c.jpg' %}" alt="" /></p>
+                        <p>{% trans '汉典中医医院下设汉典医学中心，医学中心包含三大门诊：疑难杂病门诊、中医综合门诊、中医调养门诊。疑难杂病门诊专门从事疑难杂病的研究及诊疗，拥有从国医大师、名医传承工作室专家、全国名老中医到青年中医医师的丰富人才梯队数十人，涉及9大学科，以满足不同患者的就医需求。' %}</p>
+                        <p>{% trans '中医综合门诊设有内科、妇科、儿科等科室，满足百姓日常看病就医需要，亲民的诊费，便可享受优质、高效、便捷的中医药服务。' %}</p>
+                        <p>{% trans '中医调养门诊充分发挥中医药在养生保健、疾病预防、慢病康复等方面的优势作用，积极响应国家“健康中国战略”，助力国家实现2020年“让人人基本享有中医药服务”的目标。' %}</p>
+                        <p>{% trans '从建院伊始，汉典中医医院不断提升品牌在百姓中的信任感及美誉度，弘扬国医精髓，持续向社会提供优质的医疗服务，践行汉典集团服务于健康事业的理想。' %}</p>
+                        <p class="bb1"></p>
+                        <p class="text-center"><a href="/en/">{% trans '返回' %}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}汉典制药-招贤纳士{% endblock title %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-area min-h-a"
+        style="background-image: url({% static 'assets/img/banner/9.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/title-e.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="{% url 'user:recruitment' %}">招贤纳士</a></li>
+                        <li class="active">职位详情</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock breadcrumb %}
+
+{% block content %}
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="recruitment-cont">
+                        {% if single %}
+                        <span class="time">{{ createtime }}</span>
+                        <h2>{{ position_title }}</h2>
+                        <h3>职位描述</h3>
+                        <p>
+                            <span><strong>工作经验：</strong>{{ work_experience }}</span>
+                            <span><strong>工作地点：</strong>{{ work_place }}</span>
+                            <span><strong>薪金待遇：</strong>{{ work_salary }}</span>
+                            <span><strong>工作性质：</strong>{{ work_time }}</span>
+                            <span><strong>招聘人数：</strong>{{ work_need_person }}</span>
+                        </p>
+                        <p><span><strong>专业要求：</strong>{{ work_need|safe }}
+                        <p><span><strong>工作职责：</strong>{{ work_for|safe }}
+                        <h3>投递简历</h3>
+                        <p>{{ contact }}</p>
+                        {% else %}
+
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

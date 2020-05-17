@@ -1,0 +1,73 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ news.title }}{% endblock title %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-area min-h-a"
+        style="background-image: url({% static 'assets/img/banner/8.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/en-img/title-d.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'user:en-index' %}"><i class="fa fa-home"></i>{% trans '首页' %}</a></li>
+                        <li><a href="{% url 'user:en-news' %}"><i class="fa fa-home"></i>{% trans '新闻动态' %}</a></li>
+                        <li class="active">
+                            {% if news.title|length > 5 %}
+                                {{ news.title|slice:":5" }}...
+                            {% else %}
+                                {{ news.title }}
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock breadcrumb %}
+    <!-- Start About    ============================================= -->
+{% block content %}
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="news-text">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        {% if news %}
+                            <h3>{{ news.title }}</h3>
+                            <p class="bb1" style="text-indent: 0;"><span>{{ news.createtime }}</span> <span>Source</span></p>
+                            {{ news.content|safe }}
+                            <p style="text-indent: 0">
+                                <span>
+                                    {% if previous %}
+                                    <a href="{% url 'user:en-news-detail' previous.id %}">
+                                        Prev: <span>{{ previous.title }}</span>
+                                    </a>
+                                    {% endif %}
+                                </span>
+                                <br>
+                                <span class="text-right">
+                                    {% if next %}
+                                    <a href="{% url 'user:en-news-detail' next.id %}">
+                                        Next: <span>{{ next.title }}</span>
+                                    </a>
+                                    {% endif %}
+                                </span>
+                            </p>
+                        {% else %}
+                        <span>Sorry.</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

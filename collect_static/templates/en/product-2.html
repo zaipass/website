@@ -1,0 +1,81 @@
+{% extends "en/product.html" %}
+{% load static %}
+{% load pagetag %}
+{% load i18n %}
+
+{% block tabName%}
+<li class="active">{% trans '新品' %}</li>
+{% endblock tabName%}
+
+{% block serviceName %}
+<li><a href="{% url 'user:en-product' %}">{% trans '医疗服务平台' %}<i class="fa fa-caret-right"></i></a></li>
+<li><a href="{% url 'user:en-product-class' %}">{% trans '经典中成药' %}<i class="fa fa-caret-right"></i></a></li>
+<li class="active"><a href="{% url 'user:en-product-new' %}">{% trans '中成新品药' %}<i class="fa fa-caret-right"></i></a></li>
+{% endblock serviceName %}
+
+{% block innerContent %}
+<div class="col-md-9">
+    <div class="famous-content f-item">
+        <h3 class="text-center"><span>{% trans '中成新品药' %}</span></h3>
+        <div class="row">
+            {% for p in product_data.results %}
+            <div class="col-md-4">
+                <div class="item-center item-service" >
+                    <div class="info">
+                        <h2 class="outter-img"><img src="{{ p.img }}" alt="" class="goods-img"></h2>
+                        <h4><a href="{% url 'user:en-product-all' p.id %}">{{ p.name }}</a></h4>
+                        <p class="product-detail-info">{{ p.main }}</p>
+                        <p class="detail-link"><a href="{% url 'user:en-product-all' p.id %}" class="link-goods">Detail&nbsp;&raquo;</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation" class="text-center">
+            <ul class="pagination">
+                {% if product_data.total_pages <= 3 %}
+                    {% for page in product_data.range_pages %}
+                    <li><a class="{{ page|active:current_page }}" href="{% url 'user:en-product-new' %}?page={{ page }}">{{ page }}</a></li>
+                    {% endfor %}
+                {% else %}
+
+                {% if product_data.previous %}
+                <li>
+                    <a href="{{ product_data.previous }}"
+                        aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                    {% if current_page|add:1 == product_data.total_pages|add:1 %}
+                    <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:-2 }}">{{ current_page|add:-2 }}</a></li>
+                    {% endif %}
+
+                    {% if 0 < current_page|add:-1 %}
+                    <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:-1 }}">{{ current_page|add:-1 }}</a></li>
+                    {% endif %}
+                <li><a class="active-page" href="{% url 'user:en-product-new' %}?page={{ current_page }}">{{ current_page }}</a></li>
+
+                    {% if product_data.total_pages >= current_page|add:1 %}
+                    <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:1 }}">{{ current_page|add:1 }}</a></li>
+                    {% endif %}
+
+                    {% if current_page|add:-1 == 0 %}
+                    <li><a href="{% url 'user:en-product-new' %}?page={{ current_page|add:2 }}">{{ current_page|add:2 }}</a></li>
+                    {% endif %}
+
+                    {% if product_data.next %}
+                    <li>
+                        <a href="{{ product_data.next }}"
+                            aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endif %}
+            </ul>
+        </nav>
+
+    </div>
+</div>
+{% endblock innerContent %}

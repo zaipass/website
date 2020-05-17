@@ -1,0 +1,19 @@
+{% extends "en/center.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/center-page.css' %}">
+{% endblock css %}
+{% block centerContent %}
+    <div class="famous-content f-item iframeparent">
+        <iframe
+        id="iframeid"
+        src="http://www.hdzyhosp.com/docter_team.html"
+        name="ifd"
+        onload="this.height=window.innerHeight"
+        frameborder="0"
+        scrolling="auto"
+        width="100%"
+        style="">
+        </iframe>
+    </div>
+{% endblock centerContent %}

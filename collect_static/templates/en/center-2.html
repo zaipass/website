@@ -1,0 +1,21 @@
+{% extends "en/center.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/css/center-page.css' %}">
+{% endblock css %}
+
+{% block centerContent %}
+<div class="famous-content f-item">
+    <h3 class="text-center"><span>{% trans '医学中心' %}</span></h3>
+    <p class="text-remote">{% trans '医学中心是汉典制药为医疗工作者、中医药行业工作者及爱好者定制的医学专业平台，您可以享受全方位、一站式医学专业服务：' %}</p>
+    <p>{% trans '文献下载：提供文献下载平台，方便医疗工作者自由检索' %}</p>
+    <p>{% trans '文献查询：汉典集团已上市药品文献汇总' %}</p>
+    <p>{% trans '汉典产品：汉典集团已上市药品的相关信息查询' %}</p>
+    <p>{% trans '汉典大学：权威专家中医药相关视频课程' %}</p>
+    <p>{% trans '智能问诊：汇聚常见症状及相关数据，根据病症相关词，筛选和推送个性化信息' %}</p>
+    <p>{% trans '资讯报道：医学发展前沿信息、中医药政策动态，医学学术会议的报道' %}</p>
+    <p>{% trans '中医药典：方便查询，保证用药安全' %}</p>
+</div>
+{% endblock centerContent %}

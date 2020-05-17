@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}汉典制药-医学中心{% endblock title %}
+
+{% block breadcrumb %}
+  <!-- Start Breadcrumb     ============================================= -->
+  <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/7.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+    <div class="container">
+      <div class="row banner-padding">
+        <div class="col-md-6">
+          <img src="{% static 'assets/img/title-c.png' %}" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6 text-right pt-0">
+          <ul class="breadcrumb">
+            <li><a href="{% url 'user:index' %}"><i class="fa fa-home"></i>首页</a></li>
+            <li><a href="{% url 'user:center' %}">医学中心</a></li>
+            <li class="active">{{ current_name }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+  <!-- Start About    ============================================= -->
+  <div class="famous-area default-padding top-40" style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="f-item link">
+            <h4>医学<span>中心</span></h4>
+            <ul class="sonnav">
+                <li {% if current_name == '国家专利技术' %} class="active" {% endif %}>
+                    <a href="{% url 'user:center' %}">国家专利技术<i class="fa fa-caret-right"></i>
+                    </a>
+                </li>
+                <li {% if current_name == '名医咨询' %} class="active" {% endif %}>
+                    <a href="{% url 'user:center-famous' %}">名医咨询<i class="fa fa-caret-right"></i>
+                    </a>
+                </li>
+                <li {% if current_name == '医学中心' %} class="active" {% endif %}>
+                    <a href="{% url 'user:center-hospital' %}">医学中心<i class="fa fa-caret-right"></i>
+                    </a>
+                </li>
+                <li {% if current_name == '空中课堂' %} class="active" {% endif %}>
+                    <a href="{% url 'user:center-class' %}">空中课堂<i class="fa fa-caret-right"></i>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+            {% block centerContent %}
+            <div class="famous-content f-item">
+                <h3 class="text-center"><span>国家专利技术</span></h3>
+                <p class="text-center">大学之道，在明明德，在亲民，在止于至善。</p>
+                <p class="text-center">我们弘扬真善美，服务于健康事业。汉典产业的健康事业，来自我们的不断创造。汉典产业以“科学发展、创造经典”为理念，以“真善美”服务社会，促进医药科技发展，创造值得信赖的品牌企业，实现我们“服务于健康事业”的理想和价值观。 </p>
+                <div class="row">
+                    {% for cert in certs %}
+                        <div class="col-md-4">
+                            <div class="item-center">
+                                <img src="{{ cert.img }}" alt="" height="320">
+                                <h5 style="overflow:hidden;">{{ cert.title }}</h5>
+                                <p style="overflow:hidden; text-overflow: ellipsis;height: 2em; white-space: nowrap;">{{ cert.content }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- <nav aria-label="Page navigation" class="text-center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav> -->
+            </div>
+            {% endblock centerContent %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End About -->
+{% endblock content %}

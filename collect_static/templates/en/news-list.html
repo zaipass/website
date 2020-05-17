@@ -1,0 +1,110 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans '新闻列表' %}{% endblock title %}
+
+
+{% block breadcrumb %}
+    <!-- Start Breadcrumb     ============================================= -->
+    <div class="breadcrumb-area min-h-a"
+        style="background-image: url({% static 'assets/img/banner/8.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+        <div class="container">
+            <div class="row banner-padding">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/en-img/title-d.png' %}" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right pt-0">
+                    <ul class="breadcrumb">
+                        <li><a href="{% url 'user:en-index' %}"><i class="fa fa-home"></i>{% trans '首页' %}</a></li>
+                        <li><a href="{% url 'user:en-news' %}">{% trans '新闻动态' %}</a></li>
+                        <li class="active">News</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock breadcrumb %}
+
+{% block content %}
+    <!-- Start About    ============================================= -->
+    <div class="famous-area default-padding top-40"
+        style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+        <div class="container news-content">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    {% if results %}
+                    <div class="news-title">
+                        <h2>{{ tps|slice:":2" }}<span>{{ tps|slice:"2:3" }}<a>{{ tps|slice:"3:" }}</a></span></h2>
+                    </div>
+                        {% for nl in results %}
+                            {% if forloop.counter == 1 %}
+                                <div class="news-banner">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-12"><img src="{{ nl.img_header }}" alt="" /></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-12">
+                                            <a href="{% url 'user:en-news-detail' nl.id %}">
+                                                <h3>{{ nl.title }}</h3>
+                                                <p><span>{{ nl.create_time }}</span></p>
+                                                <p>{{ nl.summarize }}</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="news-list">
+                                    <a href="{% url 'user:en-news-detail' nl.id %}">
+                                        <span class="time"><strong>{{ nl.create_time|slice:"8:" }}</strong><br>{{ nl.create_time|slice:":7" }}</span>
+                                        <h2>{{ nl.title }}</h2>
+                                        <p>{{ nl.summarize }}</p>
+                                    </a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    <nav aria-label="Page navigation" class="text-center">
+                        <ul class="pagination">
+                            {% if previous %}
+                            <li>
+                                <a href="{{ previous }}" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="javascript:void(0);" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            <li><a href="javascript:void(0);"> {{ page }} </a></li>
+                            {% if next %}
+                            <li>
+                                <a href="{{ next }}" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="javascript:void(0);" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                    <div class="total-page" style="text-align: center;">
+                        共&nbsp;{{ total_pages }}&nbsp;页
+                    </div>
+                    {% else %}
+                    Sorry, It is empty!
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+{% endblock content %}
+

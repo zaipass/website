@@ -1,0 +1,81 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ product.name }}{% endblock title %}
+
+{% block breadcrumb %}
+<!-- Start Breadcrumb     ============================================= -->
+<div class="breadcrumb-area min-h-a"
+    style="background-image: url({% static 'assets/img/banner/7.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 260px;">
+    <div class="container">
+        <div class="row banner-padding">
+            <div class="col-md-6">
+                <img src="{% static 'assets/en-img/title-c.png' %}" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6 text-right pt-0">
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'user:en-index' %}"><i class="fa fa-home"></i>{% trans '首页' %}</a></li>
+                    <li><a href="{% url 'user:en-product' %}">{% trans '产品' %}</a></li>
+                    <li class="active">Medicine</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+<!-- Start About    ============================================= -->
+<div class="famous-area default-padding top-40"
+    style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat; background-size: 100%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="f-item link">
+                    <h4>{% trans '药品' %} <span>{% trans '列表' %}</span></h4>
+                    <ul class="sonnav">
+                        {% for proname in product_name_list %}
+                        <li {% if product.name == proname.name %} class="active" {% endif %}>
+                            <a href="{% url 'user:en-product-all' proname.id %}">
+                                {{ proname.name }}
+                                <i class="fa fa-caret-right"></i>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="famous-content f-item">
+                    <h3 class="text-center"><span>{{ product.name }}</span></h3>
+                    <p class="text-center">
+                        <img src="{{ product.img }}" alt="" height="300px">
+                        <img src="{{ product.img_tw }}" alt="" height="300px">
+                        <img src="{{ product.img_th }}" alt="" height="300px">
+                        <img src="{{ product.img_fo }}" alt="" height="300px">
+                        <img src="{{ product.img_fi }}" alt="" height="300px">
+                    </p>
+                    <p class="col-md-offset-2">
+                        【{% trans '药品名称' %}】{{ product.name }}<br>
+                        【{% trans '成　　份' %}】{{ product.composition }}<br>
+                        【{% trans '性　　状' %}】{{ product.properties }}<br>
+                        【{% trans '功能主治' %}】{{ product.main }}<br>
+                        【{% trans '规　　格' %}】{{ product.standard }}<br>
+                        【{% trans '用法用量' %}】{{ product.dosage }}<br>
+                        【{% trans '贮　　藏' %}】{{ product.save_way }}<br>
+                        【{% trans '有效期' %}】 {{ product.time_long }}<br></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End About -->
+
+{% endblock content %}

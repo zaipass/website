@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}汉典制药-走进汉典{% endblock title %}
+
+{% block breadcrumb %}
+
+    <!-- Start Breadcrumb     ============================================= -->
+  <div class="breadcrumb-area min-h-a" style="background-image: url({% static 'assets/img/banner/4.jpg' %}); background-size: 100% 100%; background-position-x: center; background-repeat: no-repeat; min-height: 360px;">
+    <div class="container">
+      <div class="row banner-padding banner-padding-b">
+        <div class="col-md-12 text-center" style="padding-top: 7%">
+          <img src="{% static 'assets/img/about.png' %}" alt="" style="max-width: 60%;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Breadcrumb -->
+{% endblock breadcrumb %}
+
+{% block content %}
+  <!-- Start About    ============================================= -->
+  <div class="about-area default-padding" style="background-image: url({% static 'assets/img/bg-2.jpg' %}); background-repeat: no-repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="site-heading text-center">
+            <h2>集团 <span>介绍</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="about-items">
+          <div class="col-md-5 text-right">
+            <img src="{% static 'assets/img/about-items-b.png' %}" alt="" class="img2">
+          </div>
+          <div class="col-md-7">
+            <p style="color: #a40000; font-weight: 600;">大学之道，在明明德，在亲民，在止于至善。</p>
+            <p>我们弘扬真善美，服务于健康事业。
+              汉典产业的健康事业，来自我们的不断创造。汉典产业以“科学发展、创造经典”为理念，以“真善美”服务社会，促进医药科技发展，创造值得信赖的品牌企业，实现我们“服务于健康事业”的理想和价值观。 </p>
+            <p>汉典产业位于北京市朝阳区，为产、学、研高科技企业。</p>
+            <p>汉典产业坚持以科技为先导，立足科学前沿，坚持创新发展，致力于预防和治疗疾病的科学研究、产品开发，在西药、生物、中医、中药、茶产业等领域不断提供高技术产品。公司获得多项科技发明专利，为健康事业做出积极贡献。 </p>
+            <p>汉典产业以“大医精诚”为服务理念，坚持质量第一,提供高质、安全、天然的健康产品、优质的医疗服务，成为社会信赖的企业。</p>
+            <p>汉典产业下属北京汉典制药有限公司、武夷山凤凰茶业有限公司、汉典中医医院有限公司等企业。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End About -->
+  <!-- Start Services     ============================================= -->
+  <div class="services-area carousel-shadow default-padding bottom-less" style="background-image: url({% static 'assets/img/chose-us-area-bg-b.jpg' %}); background-repeat: no-repeat; background-size: auto 100%; background-position-x: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="site-heading text-center">
+            <h2>产业 <span>布局</span></h2>
+            <p>汉典产业坚持以科技为先导，致力于预防和治疗疾病的科学研究、产品开发，不断取得高科技成果。
+              公司获得多项科技发明和专利，为健康事业做出来积极贡献。</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center">
+          <!-- Single Item -->
+          <div class="col-md-4 col-sm-6">
+            <div class="item">
+              <div class="info">
+                <img src="{% static 'assets/img/one-1.png' %}" alt="">
+                <h4><a href="#">北京汉典制药有限公司</a></h4>
+                <p>北京汉典制药勤求古训、博采众方，
+                  探索哲理中医药学和现代科学技术的应用</p>
+                <a class="btn btn-theme border circle btn-md" href="{% url 'user:index-hd' %}">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Item -->
+          <!-- Single Item -->
+          <div class="col-md-4 col-sm-6">
+            <div class="item">
+              <div class="info">
+                <img src="{% static 'assets/img/one-2.png' %}" alt="">
+                <h4><a href="#">武夷山凤凰茶业有限公司</a></h4>
+                <p>先后上市以密云龙、凤凰、天池青翠等
+                  品牌为代表的系列产品，深受广大消费者喜爱</p>
+                <a class="btn btn-theme border circle btn-md" href="{% url 'user:index-cy' %}">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Item -->
+          <!-- Single Item -->
+          <div class="col-md-4 col-sm-6">
+            <div class="item">
+              <div class="info">
+                <img src="{% static 'assets/img/one-3.png' %}" alt="">
+                <h4><a href="#">汉典中医医院</a></h4>
+                <p>汉典中医提供经典中医药预防
+                  和治疗疾病，成为社会信赖的品牌中医</p>
+                <a class="btn btn-theme border circle btn-md" href="{% url 'user:index-zy' %}">了解更多</a>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Item -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services -->
+  <!-- Start Testimonials     ============================================= -->
+  <div class="services-area bg-light carousel-shadow default-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="site-heading text-center">
+            <h2>公司 <span>荣誉</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="department-items services-carousel owl-carousel owl-theme text-center">
+            <!-- Single Item -->
+            {% for cert in certs %}
+                <div class="item">
+                  <div class="content">
+                    <h4><img src="{{ cert.img }}" alt=""></h4>
+                    <p>{{ cert.title }}</p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Testimonials -->
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock js %}
