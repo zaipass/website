@@ -1,7 +1,7 @@
 pipeline {
     agent none
     environment {
-        ENV_DIR = '/root/env/'
+        ENV_DIR = '/root/env'
     }
     stages {
         stage('Test-Build') { 
@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh '''
                     virtualenv ${ENV_WEBSITE}/website
+                    pwd
                     source ${ENV_WEBSITE}/website/bin/activate
                     pip list
                     pip install -r requirements.txt
