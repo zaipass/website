@@ -23,8 +23,9 @@ pipeline {
                     virtualenv website
                     source ./website/bin/activate
                     pip list
-                    uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
+                    pwd
                 '''
+                // uwsgi --ini /home/Documents/GitHub/website/uwsgi.ini
             }
         }
     }
