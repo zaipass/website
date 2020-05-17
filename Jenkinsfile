@@ -12,7 +12,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'echo "what?"'
+                sh 'echo "what"'
                 // sh 'pip install -r requirements.txt' 
                 // sh 'python manage.py makemigrations'
                 // sh 'python manage.py migrate'
