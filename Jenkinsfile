@@ -27,6 +27,7 @@ pipeline {
                     source ${ENV_WEBSITE}/website/bin/activate
                     pip install -r requirements.txt
                     uwsgi --ini uwsgi.ini
+                    pwd
                     echo "success"
                 '''
                 // rm -rf ${ENV_WEBSITE}/website
