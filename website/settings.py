@@ -93,6 +93,11 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'mysql',
         'NAME': 'website',
+        'TEST': {
+            'NAME': 'testdatabase',
+            'CHARSET': 'utf8',
+            'COLLATION': 'utf8_general_ci',
+        },
     }
 }
 
